@@ -8,7 +8,7 @@ namespace SurveyExtensionsTests
     using SurveyExtensions.Builders;
     using SurveyExtensions.Elements;
 
-    public class UnitTest1
+    public class GeneralBuilderTests
     {
         [Fact]
         public void Test1()
@@ -37,7 +37,7 @@ namespace SurveyExtensionsTests
             
             
             var myBuildedElements = companyBuilder.Build();
-            myBuildedElements.Count.Should().Be(3);
+            myBuildedElements.Pages.Count.Should().Be(3);
         }
     }
 }

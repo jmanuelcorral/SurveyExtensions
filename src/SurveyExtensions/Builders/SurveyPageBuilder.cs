@@ -6,10 +6,10 @@
     using Elements;
     using Helpers;
 
-    public class SurveyPageBuilder<TEntity>: SurveyItemBuilder where TEntity : new()
+    public class SurveyPageBuilder<TEntity>: IBuilder<SurveyPage> where TEntity : new()
     {
         private SurveyPage _item = new SurveyPage();
-        private List<SurveyItemBuilder> elementsBuilder = new List<SurveyItemBuilder>();
+        private List<IBuilder<SurveyItem>> elementsBuilder = new List<IBuilder<SurveyItem>>();
         
         public SurveyPageBuilder<TEntity> HasName(string name)
         {
@@ -33,7 +33,7 @@
             return AddSingleInput(expression, x => x.HasTitle(title).HasPlaceHolder(placeholder).SetInputType(inputType));
         }
 
-        public override SurveyItem Build()
+        public SurveyPage Build()
         {
             foreach (var surveyItemBuilder in elementsBuilder)
             {

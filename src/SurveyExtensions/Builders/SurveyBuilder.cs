@@ -7,7 +7,8 @@
 
     public class SurveyBuilder<TEntity> where TEntity : new()
     {
-        private readonly List<SurveyItemBuilder> _pageBuilders = new List<SurveyItemBuilder>();
+        private readonly Survey survey = new Survey();
+        private readonly List<SurveyPageBuilder<TEntity>> _pageBuilders = new List<SurveyPageBuilder<TEntity>>();
 
        
         public SurveyBuilder<TEntity> AddPage(string pageName, Action<SurveyPageBuilder<TEntity>> pageBuilder)
@@ -19,9 +20,11 @@
            return this;
         }
 
-        public List<SurveyItem> Build()
+        public Survey Build()
         {
-            return _pageBuilders.Select(x => x.Build()).ToList();
+
+            survey.Pages.AddRange(_pageBuilders.Select(x => x.Build()).ToList());
+            return survey;
         }
     }
 
