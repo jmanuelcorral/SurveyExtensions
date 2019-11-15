@@ -68,29 +68,29 @@
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasOtherChoide(string choiceText)
+        public SurveyCheckboxItemBuilder<TEntity> HasOtherChoice(string choiceText)
         {
             _item.OtherText = choiceText;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasSelectAllChoide(string choiceText)
+        public SurveyCheckboxItemBuilder<TEntity> HasSelectAllChoice(string choiceText)
         {
             _item.HasSelectAll = true;
             _item.SelectAllText = choiceText;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasSelectNoneChoide(string choiceText)
+        public SurveyCheckboxItemBuilder<TEntity> HasSelectNoneChoice(string choiceText)
         {
             _item.HasNone = true;
             _item.NoneText = choiceText;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> AddChoide(string choiceValue, string choiceText)
+        public SurveyCheckboxItemBuilder<TEntity> AddChoice(string choiceValue, string choiceText)
         {
-            _item.Choices.Add(new SurveyCheckboxChoice() { Value = choiceValue, Text = choiceText });
+            _item.Choices.Add(new SurveyChoice() { Value = choiceValue, Text = choiceText });
             return this;
         }
 

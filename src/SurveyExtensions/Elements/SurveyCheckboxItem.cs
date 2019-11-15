@@ -9,7 +9,7 @@
 
         public int ColCount { get; set; }
 
-        public IList<SurveyCheckboxChoice> Choices { get; set; } = new List<SurveyCheckboxChoice>();
+        public IList<SurveyChoice> Choices { get; set; } = new List<SurveyChoice>();
 
 
         public string OtherText { get; set; }

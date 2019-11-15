@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements
 {
-    public class SurveyCheckboxChoice
+    public class SurveyChoice
     {
        
         public string Value { get; set; }

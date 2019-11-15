@@ -50,6 +50,21 @@
             return AddCheckboxInput(expression, x => x.HasTitle(title));
         }
 
+        public SurveyPageBuilder<TEntity> AddRadiogroupInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyRadiogroupItemBuilder<TEntity>> radiogroupBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new SurveyRadiogroupItemBuilder<TEntity>();
+            radiogroupBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
+        public SurveyPageBuilder<TEntity> AddRadiogroupInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        {
+            return AddRadiogroupInput(expression, x => x.HasTitle(title));
+        }
         public SurveyPage Build()
         {
             foreach (var surveyItemBuilder in elementsBuilder)

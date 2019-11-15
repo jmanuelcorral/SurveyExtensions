@@ -1,9 +1,8 @@
-using System;
-using Xunit;
-
 namespace SurveyExtensionsTests
 {
-    using Dtos;
+    using System;
+    using Xunit;
+    using SurveyExtensionsTests.Dtos;
     using FluentAssertions;
     using SurveyExtensions.Builders;
     using SurveyExtensions.Elements;
@@ -41,9 +40,12 @@ namespace SurveyExtensionsTests
         }
 
         [Fact]
-        public void TestCheckBox()
+        public void TestBuilders()
         {
-            SurveyBuilder<CompanyDto> companyBuilder = Factory.BulderFactory.Get_1Page_3Checkbox();
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+
+            Factory.BulderFactory.Get_1Page_3Checkbox(companyBuilder, "Checkbox Page");
+            Factory.BulderFactory.Get_1Page_3Radiogroup(companyBuilder, "Radiogroup Page");
 
             var myBuildedElements = companyBuilder.Build();
             myBuildedElements.Pages.Count.Should().Be(1);
