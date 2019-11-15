@@ -11,7 +11,7 @@ namespace SurveyExtensionsTests
     public class GeneralBuilderTests
     {
         [Fact]
-        public void Test1()
+        public void TestSingleInput()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
 
@@ -38,6 +38,15 @@ namespace SurveyExtensionsTests
             
             var myBuildedElements = companyBuilder.Build();
             myBuildedElements.Pages.Count.Should().Be(3);
+        }
+
+        [Fact]
+        public void TestCheckBox()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = Factory.BulderFactory.Get_1Page_3Checkbox();
+
+            var myBuildedElements = companyBuilder.Build();
+            myBuildedElements.Pages.Count.Should().Be(1);
         }
     }
 }
