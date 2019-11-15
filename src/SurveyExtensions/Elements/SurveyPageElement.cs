@@ -6,6 +6,7 @@
     {
         public string Type { get; set; }
         public string Title { get; set; }
-        public Boolean IsRequired { get; set; } = false;
+        public string Description { get; set; }
+
     }
 }
