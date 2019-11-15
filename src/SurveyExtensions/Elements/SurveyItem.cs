@@ -3,6 +3,5 @@
     public class SurveyItem
     {
         public string Name { get; set; }
-       
     }
 }
