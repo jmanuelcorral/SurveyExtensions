@@ -60,7 +60,7 @@
         {
             builder.AddPage(pageName, 
                     page =>
-                        page.AddRadiogroupInput(x => x.ContactData,
+                        page.AddRadiogroup(x => x.ContactData,
                                 b => b
                                     .HasTitle("Radiogroup 1 Title (asc)")
                                     .AddChoice("RG1Val1", "Choice 1")
@@ -71,7 +71,7 @@
                                     .HasColumnCount(1)
                                     .HasOtherChoice("Other choice text")
                                     .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
-                        .AddRadiogroupInput(x => x.ContactData,
+                        .AddRadiogroup(x => x.ContactData,
                                 b => b
                                     .HasTitle("Radiogroup  2 Title (desc)")
                                     .AddChoice("RG2Val1", "Choice 1")
@@ -80,7 +80,7 @@
                                     .AddChoice("RG2Val4", "Choice 4")
                                     .AddChoice("RG2Val5", "Choice 5")
                                     .HasColumnCount(2))
-                        .AddRadiogroupInput(x => x.ContactData,
+                        .AddRadiogroup(x => x.ContactData,
                                 b => b
                                     .HasTitle("Radiogroup  3 Title (random)")
                                     .AddChoice("RG3Val1", "Choice 1")
@@ -89,6 +89,45 @@
                                     .AddChoice("RG3Val4", "Choice 4")
                                     .AddChoice("RG3Val5", "Choice 5")
                                     .HasColumnCount(3)
+                                    .SetChoicesOrder(SurveyChoicesOrderEnum.random))
+                );
+        }
+
+        public static void Get_1Page_3Dropdown(SurveyBuilder<CompanyDto> builder,
+                                                            string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page.AddDropdown(x => x.ContactData,
+                                b => b
+                                    .HasTitle("Dropdown 1 Title (asc)")
+                                    .HasDescription("Dropdown 1 description")
+                                    .AddChoice("DD1Val1", "Choice 1")
+                                    .AddChoice("DD1Val2", "Choice 2")
+                                    .AddChoice("DD1Val3", "Choice 3")
+                                    .AddChoice("DD1Val4", "Choice 4")
+                                    .AddChoice("DD1Val5", "Choice 5")
+                                    .HasOtherChoice("Other choice text")
+                                    .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
+                        .AddDropdown(x => x.ContactData,
+                                b => b
+                                    .HasTitle("Dropdown  2 Title (desc)")
+                                    .HasDescription("Dropdown 2 description")
+                                    .AddChoice("DD2Val1", "Choice 1")
+                                    .AddChoice("DD2Val2", "Choice 2")
+                                    .AddChoice("DD2Val3", "Choice 3")
+                                    .AddChoice("DD2Val4", "Choice 4")
+                                    .AddChoice("DD2Val5", "Choice 5")
+                                    .SetChoicesOrder(SurveyChoicesOrderEnum.desc))
+                        .AddDropdown(x => x.ContactData,
+                                b => b
+                                    .HasTitle("Dropdown  3 Title (random)")
+                                    .HasDescription("Dropdown 3 description")
+                                    .AddChoice("DD3Val1", "Choice 1")
+                                    .AddChoice("DD3Val2", "Choice 2")
+                                    .AddChoice("DD3Val3", "Choice 3")
+                                    .AddChoice("DD3Val4", "Choice 4")
+                                    .AddChoice("DD3Val5", "Choice 5")
                                     .SetChoicesOrder(SurveyChoicesOrderEnum.random))
                 );
         }

@@ -53,7 +53,7 @@
             return AddCheckboxInput(expression, x => x.HasTitle(title));
         }
 
-        public SurveyPageBuilder<TEntity> AddRadiogroupInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyRadiogroupItemBuilder<TEntity>> radiogroupBuilder)
+        public SurveyPageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyRadiogroupItemBuilder<TEntity>> radiogroupBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -64,10 +64,27 @@
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddRadiogroupInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        public SurveyPageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
         {
-            return AddRadiogroupInput(expression, x => x.HasTitle(title));
+            return AddRadiogroup(expression, x => x.HasTitle(title));
         }
+
+        public SurveyPageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyDropdownItemBuilder<TEntity>> radiogroupBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new SurveyDropdownItemBuilder<TEntity>();
+            radiogroupBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
+        public SurveyPageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        {
+            return AddRadiogroup(expression, x => x.HasTitle(title));
+        }
+
         public SurveyPage Build()
         {
             foreach (var surveyItemBuilder in elementsBuilder)

@@ -21,6 +21,7 @@ namespace SurveyExtensionsTests
 
             Factory.BulderFactory.Get_1Page_3Checkbox(companyBuilder, "Checkbox Page");
             Factory.BulderFactory.Get_1Page_3Radiogroup(companyBuilder, "Radiogroup Page");
+            Factory.BulderFactory.Get_1Page_3Dropdown(companyBuilder, "Dropdown Page");
 
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });

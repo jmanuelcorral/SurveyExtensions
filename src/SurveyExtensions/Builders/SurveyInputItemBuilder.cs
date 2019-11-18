@@ -45,13 +45,13 @@
 
         public SurveyInputItemBuilder<TEntity> IsVisible()
         {
-            _item.IsVisible = true;
+            _item.Visible = true;
             return this;
         }
 
         public SurveyInputItemBuilder<TEntity> IsNotVisible()
         {
-            _item.IsVisible = false;
+            _item.Visible = false;
             return this;
         }
 

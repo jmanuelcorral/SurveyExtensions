@@ -46,9 +46,9 @@ namespace SurveyExtensionsTests
 
             Factory.BulderFactory.Get_1Page_3Checkbox(companyBuilder, "Checkbox Page");
             Factory.BulderFactory.Get_1Page_3Radiogroup(companyBuilder, "Radiogroup Page");
-
+            Factory.BulderFactory.Get_1Page_3Dropdown(companyBuilder, "DropDown Page");
             var myBuildedElements = companyBuilder.Build();
-            myBuildedElements.Pages.Count.Should().Be(2);
+            myBuildedElements.Pages.Count.Should().Be(3);
         }
     }
 }

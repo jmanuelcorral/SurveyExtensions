@@ -44,13 +44,13 @@
 
         public SurveyCheckboxItemBuilder<TEntity> IsVisible()
         {
-            _item.IsVisible = true;
+            _item.Visible = true;
             return this;
         }
 
         public SurveyCheckboxItemBuilder<TEntity> IsNotVisible()
         {
-            _item.IsVisible = false;
+            _item.Visible = false;
             return this;
         }
 
