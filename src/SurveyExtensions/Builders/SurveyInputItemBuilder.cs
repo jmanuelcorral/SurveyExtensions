@@ -4,51 +4,9 @@
     using Elements;
 
     public class SurveyInputItemBuilder<TEntity> :
-        SurveyItemBuilderBase<TEntity, SurveyInputItem>,
+        SurveyItemBuilderBase<TEntity, SurveyInputItem, SurveyInputItemBuilder<TEntity>>,
         IBuilder<SurveyItem> where TEntity : new()
     {
-        public SurveyInputItemBuilder<TEntity> HasName(string value)
-        {
-            _item.Name = value;
-            return this;
-        }
-
-        public SurveyInputItemBuilder<TEntity> HasTitle(string value)
-        {
-            _item.Title = value;
-            return this;
-        }
-
-        public SurveyInputItemBuilder<TEntity> HasDescription(string value)
-        {
-            _item.Description = value;
-            return this;
-        }
-
-        public SurveyInputItemBuilder<TEntity> IsRequired()
-        {
-            _item.IsRequired = true;
-            return this;
-        }
-
-        public SurveyInputItemBuilder<TEntity> IsNotRequired()
-        {
-            _item.IsRequired = false;
-            return this;
-        }
-
-        public SurveyInputItemBuilder<TEntity> IsVisible()
-        {
-            _item.Visible = true;
-            return this;
-        }
-
-        public SurveyInputItemBuilder<TEntity> IsNotVisible()
-        {
-            _item.Visible = false;
-            return this;
-        }
-
         public SurveyInputItemBuilder<TEntity> SetInputType(SurveyInputType inputType)
         {
             string enumName = Enum.GetName(typeof(SurveyInputType) ,inputType);
@@ -59,12 +17,6 @@
         public SurveyInputItemBuilder<TEntity> HasPlaceHolder(string placeholder)
         {
             _item.PlaceHolder = placeholder;
-            return this;
-        }
-
-        public SurveyInputItemBuilder<TEntity> ContinueInSameLine()
-        {
-            _item.StartWithNewLine = false;
             return this;
         }
     }
