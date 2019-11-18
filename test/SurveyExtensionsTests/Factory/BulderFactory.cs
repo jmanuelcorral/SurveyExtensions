@@ -1,11 +1,8 @@
 ﻿namespace SurveyExtensionsTests.Factory
 {
     using SurveyExtensions.Builders;
-    using SurveyExtensions.Elements;
+    using SurveyExtensions.Elements.ChoiceItems;
     using SurveyExtensionsTests.Dtos;
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
 
 
     public static class BulderFactory

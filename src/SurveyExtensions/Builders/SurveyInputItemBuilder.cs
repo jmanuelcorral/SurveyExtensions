@@ -61,5 +61,11 @@
             _item.PlaceHolder = placeholder;
             return this;
         }
+
+        public SurveyInputItemBuilder<TEntity> ContinueInSameLine()
+        {
+            _item.StartWithNewLine = false;
+            return this;
+        }
     }
 }

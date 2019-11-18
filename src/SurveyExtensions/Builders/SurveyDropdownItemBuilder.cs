@@ -2,6 +2,7 @@
 {
     using System;
     using Elements;
+    using SurveyExtensions.Elements.ChoiceItems;
 
     public class SurveyDropdownItemBuilder<TEntity> : 
         SurveyItemBuilderBase<TEntity, SurveyDropdownItem>,
@@ -66,6 +67,12 @@
         public SurveyDropdownItemBuilder<TEntity> AddChoice(string choiceValue, string choiceText)
         {
             _item.Choices.Add(new SurveyChoice() { Value = choiceValue, Text = choiceText });
+            return this;
+        }
+
+        public SurveyDropdownItemBuilder<TEntity> ContinueInSameLine()
+        {
+            _item.StartWithNewLine = false;
             return this;
         }
 

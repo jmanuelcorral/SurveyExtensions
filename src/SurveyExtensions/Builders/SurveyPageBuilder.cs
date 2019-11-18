@@ -36,6 +36,24 @@
                        .SetInputType(inputType));
         }
 
+        public SurveyPageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyCommentItemBuilder<TEntity>> inputBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new SurveyCommentItemBuilder<TEntity>();
+            inputBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
+        public SurveyPageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, int rows)
+        {
+            return AddCommentInput(expression,
+                x => x.HasTitle(title)
+                       .HasPlaceHolder(placeholder)
+                       .HasRows(7));
+        }
 
         public SurveyPageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyCheckboxItemBuilder<TEntity>> checkboxBuilder)
         {

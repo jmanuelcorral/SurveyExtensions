@@ -17,7 +17,15 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
 
-            companyBuilder.AddPage("Page1",p => p.AddSingleInput(c => c.DocumentId, "Put Here your DNI", "Document Id Card", SurveyInputType.Text));
+            companyBuilder.AddPage("Page1",
+                p => p.AddSingleInput(c => c.DocumentId, "Put Here your DNI", "Document Id Card", SurveyInputType.Text)
+                .AddCommentInput(c => c.ContactData, "Datos de contacto", "entra los datos de contacto", 7)
+                .AddCommentInput(c => c.ContactData, 
+                                i => i.HasTitle("Datos de contacto 2")
+                                .HasPlaceHolder("placeholder 2")
+                                .HasRows(14)
+                                .ContinueInSameLine())
+                );
 
             Factory.BulderFactory.Get_1Page_3Checkbox(companyBuilder, "Checkbox Page");
             Factory.BulderFactory.Get_1Page_3Radiogroup(companyBuilder, "Radiogroup Page");

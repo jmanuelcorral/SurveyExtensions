@@ -1,4 +1,4 @@
-﻿namespace SurveyExtensions.Elements
+﻿namespace SurveyExtensions.Elements.ChoiceItems
 {
     using System.Collections.Generic;
 

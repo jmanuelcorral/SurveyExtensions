@@ -2,6 +2,7 @@
 {
     using System;
     using Elements;
+    using SurveyExtensions.Elements.ChoiceItems;
 
     public class SurveyRadiogroupItemBuilder<TEntity> :
         SurveyItemBuilderBase<TEntity, SurveyRadiogroupItem>,
@@ -72,6 +73,12 @@
         public SurveyRadiogroupItemBuilder<TEntity> AddChoice(string choiceValue, string choiceText)
         {
             _item.Choices.Add(new SurveyChoice() { Value = choiceValue, Text = choiceText });
+            return this;
+        }
+
+        public SurveyRadiogroupItemBuilder<TEntity> ContinueInSameLine()
+        {
+            _item.StartWithNewLine = false;
             return this;
         }
     }

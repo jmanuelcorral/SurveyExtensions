@@ -2,6 +2,7 @@
 {
     using System;
     using Elements;
+    using SurveyExtensions.Elements.ChoiceItems;
 
     public class SurveyCheckboxItemBuilder<TEntity> : 
         SurveyItemBuilderBase<TEntity, SurveyCheckboxItem>,
@@ -89,5 +90,10 @@
             return this;
         }
 
+        public SurveyCheckboxItemBuilder<TEntity> ContinueInSameLine()
+        {
+            _item.StartWithNewLine = false;
+            return this;
+        }
     }
 }
