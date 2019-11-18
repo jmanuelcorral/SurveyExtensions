@@ -6,8 +6,4 @@
     {
         TObjectToBuild Build();
     }
-    //public abstract class SurveyItemBuilder
-    //{
-    //    public abstract SurveyItem Build();
-    //}
 }

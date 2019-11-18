@@ -30,7 +30,10 @@
 
         public SurveyPageBuilder<TEntity> AddSingleInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, SurveyInputType inputType)
         {
-            return AddSingleInput(expression, x => x.HasTitle(title).HasPlaceHolder(placeholder).SetInputType(inputType));
+            return AddSingleInput(expression, 
+                x => x.HasTitle(title)
+                       .HasPlaceHolder(placeholder)
+                       .SetInputType(inputType));
         }
 
 

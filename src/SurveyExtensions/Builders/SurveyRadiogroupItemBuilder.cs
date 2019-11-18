@@ -3,15 +3,15 @@
     using System;
     using Elements;
 
-    public class SurveyRadiogroupItemBuilder<TEntity> : IBuilder<SurveyItem> where TEntity : new()
+    public class SurveyRadiogroupItemBuilder<TEntity> :
+        SurveyItemBuilderBase<TEntity, SurveyRadiogroupItem>,
+        IBuilder<SurveyItem> where TEntity : new()
     {
-        private SurveyRadiogroupItem _item = new SurveyRadiogroupItem();
-
         public SurveyRadiogroupItemBuilder()
         {
             _item.Type = "radiogroup";
         }
-       
+
         public SurveyRadiogroupItemBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;
@@ -29,7 +29,6 @@
             _item.Description = value;
             return this;
         }
-
 
         public SurveyRadiogroupItemBuilder<TEntity> IsRequired()
         {
@@ -79,11 +78,6 @@
         {
             _item.Choices.Add(new SurveyChoice() { Value = choiceValue, Text = choiceText });
             return this;
-        }
-
-        public SurveyItem Build()
-        {
-            return _item;
         }
     }
 }

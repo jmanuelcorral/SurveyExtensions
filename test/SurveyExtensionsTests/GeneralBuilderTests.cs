@@ -48,7 +48,7 @@ namespace SurveyExtensionsTests
             Factory.BulderFactory.Get_1Page_3Radiogroup(companyBuilder, "Radiogroup Page");
 
             var myBuildedElements = companyBuilder.Build();
-            myBuildedElements.Pages.Count.Should().Be(1);
+            myBuildedElements.Pages.Count.Should().Be(2);
         }
     }
 }

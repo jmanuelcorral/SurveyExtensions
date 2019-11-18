@@ -3,22 +3,22 @@
     using System;
     using Elements;
 
-    public class SurveyCheckboxItemBuilder<TEntity> : IBuilder<SurveyItem> where TEntity : new()
+    public class SurveyCheckboxItemBuilder<TEntity> : 
+        SurveyItemBuilderBase<TEntity, SurveyCheckboxItem>,
+        IBuilder<SurveyItem> where TEntity : new()
     {
-        private SurveyCheckboxItem _item = new SurveyCheckboxItem();
-
         public SurveyCheckboxItemBuilder()
         {
             _item.Type = "checkbox";
         }
-       
+
         public SurveyCheckboxItemBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasTitle(string value)
+        public SurveyCheckboxItemBuilder<TEntity> HasTitle(string value) 
         {
             _item.Title = value;
             return this;
@@ -29,7 +29,6 @@
             _item.Description = value;
             return this;
         }
-
 
         public SurveyCheckboxItemBuilder<TEntity> IsRequired()
         {
@@ -94,9 +93,5 @@
             return this;
         }
 
-        public SurveyItem Build()
-        {
-            return _item;
-        }
     }
 }
