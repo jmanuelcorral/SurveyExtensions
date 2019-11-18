@@ -36,12 +36,12 @@
                        .SetInputType(inputType));
         }
 
-        public SurveyPageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyCommentItemBuilder<TEntity>> inputBuilder)
+        public SurveyPageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyCommentItemBuilder<TEntity>> commentBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
             var builder = new SurveyCommentItemBuilder<TEntity>();
-            inputBuilder.Invoke(builder);
+            commentBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
@@ -87,12 +87,12 @@
             return AddRadiogroup(expression, x => x.HasTitle(title));
         }
 
-        public SurveyPageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyDropdownItemBuilder<TEntity>> radiogroupBuilder)
+        public SurveyPageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyDropdownItemBuilder<TEntity>> dropDownBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
             var builder = new SurveyDropdownItemBuilder<TEntity>();
-            radiogroupBuilder.Invoke(builder);
+            dropDownBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
@@ -101,6 +101,28 @@
         public SurveyPageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
         {
             return AddRadiogroup(expression, x => x.HasTitle(title));
+        }
+
+        public SurveyPageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyRatinItemBuilder<TEntity>> ratingBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new SurveyRatinItemBuilder<TEntity>();
+            ratingBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
+        public SurveyPageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, 
+            string title, string description, int rateMin, int rateMax, int rateStep)
+        {
+            return AddRating(expression, 
+                x => x.HasTitle(title)
+                        .HasDescription(description)
+                        .HasRateMin(rateMin)
+                        .HasRateMax(rateMax)
+                        .HasRateStep(rateStep));
         }
 
         public SurveyPage Build()

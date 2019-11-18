@@ -25,6 +25,17 @@ namespace SurveyExtensionsTests
                                 .HasPlaceHolder("placeholder 2")
                                 .HasRows(14)
                                 .ContinueInSameLine())
+                .AddRating(c=>c.IsLegalPerson, "Rating with values", "", 1, 10, 1)
+                .AddRating(c => c.IsLegalPerson,
+                            i=> i.HasTitle("Rating with options")
+                                .AddRateValue("RTVal1", "Val 1")
+                                .AddRateValue("RTVal2", "Val 2")
+                                .AddRateValue("RTVal3", "Val 3")
+                                .AddRateValue("RTVal4", "Val 4")
+                                .AddRateValue("RTVal5", "Val 5")
+                                .AddRateValue("RTVal6", "Val 6")
+                                .AddRateValue("RTVal7", "Val 7")
+                                .AddRateValue("RTVal8", "Val 8"))
                 );
 
             Factory.BulderFactory.Get_1Page_3Checkbox(companyBuilder, "Checkbox Page");
