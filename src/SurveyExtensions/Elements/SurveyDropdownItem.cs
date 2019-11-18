@@ -4,7 +4,12 @@
 
     public class SurveyDropdownItem : SurveyPageElement
     {
-       
+
+        public SurveyDropdownItem()
+        {
+            Type = "dropdown";
+        }
+
         public string ChoicesOrder { get; set; }
 
         public IList<SurveyChoice> Choices { get; set; } = new List<SurveyChoice>();

@@ -4,7 +4,12 @@
 
     public class SurveyRadiogroupItem : SurveyPageElement
     {
-       
+
+        public SurveyRadiogroupItem()
+        {
+            Type = "radiogroup";
+        }
+
         public string ChoicesOrder { get; set; }
         public int ColCount { get; set; }
         public bool HasOther { get; set; }

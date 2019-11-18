@@ -4,7 +4,11 @@
 
     public class SurveyCheckboxItem : SurveyPageElement
     {
-       
+        public SurveyCheckboxItem()
+        {
+            Type = "checkbox";
+        }
+
         public string ChoicesOrder { get; set; }
 
         public int ColCount { get; set; }

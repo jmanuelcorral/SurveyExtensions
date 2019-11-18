@@ -7,11 +7,6 @@
         SurveyItemBuilderBase<TEntity, SurveyRadiogroupItem>,
         IBuilder<SurveyItem> where TEntity : new()
     {
-        public SurveyRadiogroupItemBuilder()
-        {
-            _item.Type = "radiogroup";
-        }
-
         public SurveyRadiogroupItemBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;

@@ -7,11 +7,6 @@
         SurveyItemBuilderBase<TEntity, SurveyDropdownItem>,
         IBuilder<SurveyItem> where TEntity : new()
     {
-        public SurveyDropdownItemBuilder()
-        {
-            _item.Type = "dropdown";
-        }
-
         public SurveyDropdownItemBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;

@@ -7,10 +7,6 @@
         SurveyItemBuilderBase<TEntity, SurveyCheckboxItem>,
         IBuilder<SurveyItem> where TEntity : new()
     {
-        public SurveyCheckboxItemBuilder()
-        {
-            _item.Type = "checkbox";
-        }
 
         public SurveyCheckboxItemBuilder<TEntity> HasName(string value)
         {

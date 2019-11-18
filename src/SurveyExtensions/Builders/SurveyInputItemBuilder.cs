@@ -7,12 +7,6 @@
         SurveyItemBuilderBase<TEntity, SurveyInputItem>,
         IBuilder<SurveyItem> where TEntity : new()
     {
-        public SurveyInputItemBuilder()
-        {
-            _item.Type = "text";
-            _item.InputType = "text";
-        }
-
         public SurveyInputItemBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;
