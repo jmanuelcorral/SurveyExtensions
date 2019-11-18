@@ -5,9 +5,45 @@
     using SurveyExtensions.Elements.ChoiceItems;
 
     public class SurveyCheckboxItemBuilder<TEntity> : 
-        SurveyItemBuilderBase<TEntity, SurveyCheckboxItem, SurveyCheckboxItemBuilder<TEntity>>,
+        SurveyItemBuilderBase<TEntity, SurveyCheckboxItem>,
         IBuilder<SurveyItem> where TEntity : new()
     {
+
+        public SurveyCheckboxItemBuilder<TEntity> HasName(string value)
+        {
+            _item.Name = value;
+            return this;
+        }
+        public SurveyCheckboxItemBuilder<TEntity> HasTitle(string value)
+        {
+            _item.Title = value;
+            return this;
+        }
+
+        public SurveyCheckboxItemBuilder<TEntity> HasDescription(string value)
+        {
+            _item.Description = value;
+            return this;
+        }
+
+        public SurveyCheckboxItemBuilder<TEntity> IsRequired()
+        {
+            _item.IsRequired = true;
+            return this;
+        }
+
+        public SurveyCheckboxItemBuilder<TEntity> IsHidden()
+        {
+            _item.Visible = false;
+            return this;
+        }
+
+        public SurveyCheckboxItemBuilder<TEntity> ContinueInSameLine()
+        {
+            _item.StartWithNewLine = false;
+            return this;
+        }
+
         public SurveyCheckboxItemBuilder<TEntity> HasColumnCount(int value)
         {
             _item.ColCount = value;

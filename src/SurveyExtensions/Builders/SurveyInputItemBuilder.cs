@@ -4,9 +4,44 @@
     using Elements;
 
     public class SurveyInputItemBuilder<TEntity> :
-        SurveyItemBuilderBase<TEntity, SurveyInputItem, SurveyInputItemBuilder<TEntity>>,
+        SurveyItemBuilderBase<TEntity, SurveyInputItem>,
         IBuilder<SurveyItem> where TEntity : new()
     {
+        public SurveyInputItemBuilder<TEntity> HasName(string value)
+        {
+            _item.Name = value;
+            return this;
+        }
+        public SurveyInputItemBuilder<TEntity> HasTitle(string value)
+        {
+            _item.Title = value;
+            return this;
+        }
+
+        public SurveyInputItemBuilder<TEntity> HasDescription(string value)
+        {
+            _item.Description = value;
+            return this;
+        }
+
+        public SurveyInputItemBuilder<TEntity> IsRequired()
+        {
+            _item.IsRequired = true;
+            return this;
+        }
+
+        public SurveyInputItemBuilder<TEntity> IsHidden()
+        {
+            _item.Visible = false;
+            return this;
+        }
+
+        public SurveyInputItemBuilder<TEntity> ContinueInSameLine()
+        {
+            _item.StartWithNewLine = false;
+            return this;
+        }
+
         public SurveyInputItemBuilder<TEntity> SetInputType(SurveyInputType inputType)
         {
             string enumName = Enum.GetName(typeof(SurveyInputType) ,inputType);
