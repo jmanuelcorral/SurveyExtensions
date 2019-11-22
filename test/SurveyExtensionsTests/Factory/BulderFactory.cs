@@ -68,10 +68,10 @@
                 );
         }
 
-        public static void Get_1Page_3Radiogroup(SurveyBuilder<CompanyDto> builder,
-                                                                    string pageName)
+        public static void Get_1Page_RadiogroupAscending(SurveyBuilder<CompanyDto> builder,
+                                                            string pageName)
         {
-            builder.AddPage(pageName, 
+            builder.AddPage(pageName,
                     page =>
                         page.AddRadiogroup(x => x.ContactData,
                                 b => b
@@ -84,7 +84,15 @@
                                     .HasColumnCount(1)
                                     .HasOtherChoice("Other choice text")
                                     .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
-                        .AddRadiogroup(x => x.ContactData,
+                );
+        }
+
+        public static void Get_1Page_RadiogroupDescending(SurveyBuilder<CompanyDto> builder,
+                                                                    string pageName)
+        {
+            builder.AddPage(pageName, 
+                    page =>
+                        page.AddRadiogroup(x => x.ContactData,
                                 b => b
                                     .HasTitle("Radiogroup  2 Title (desc)")
                                     .AddChoice("RG2Val1", "Choice 1")
@@ -93,7 +101,15 @@
                                     .AddChoice("RG2Val4", "Choice 4")
                                     .AddChoice("RG2Val5", "Choice 5")
                                     .HasColumnCount(2))
-                        .AddRadiogroup(x => x.ContactData,
+                );
+        }
+
+        public static void Get_1Page_RadiogroupRandom(SurveyBuilder<CompanyDto> builder,
+                                                             string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page.AddRadiogroup(x => x.ContactData,
                                 b => b
                                     .HasTitle("Radiogroup  3 Title (random)")
                                     .AddChoice("RG3Val1", "Choice 1")
@@ -106,7 +122,7 @@
                 );
         }
 
-        public static void Get_1Page_3Dropdown(SurveyBuilder<CompanyDto> builder,
+        public static void Get_1Page_DropdownAscending(SurveyBuilder<CompanyDto> builder,
                                                             string pageName)
         {
             builder.AddPage(pageName,
@@ -122,7 +138,15 @@
                                     .AddChoice("DD1Val5", "Choice 5")
                                     .HasOtherChoice("Other choice text")
                                     .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
-                        .AddDropdown(x => x.ContactData,
+                );
+        }
+
+        public static void Get_1Page_DropdownDescending(SurveyBuilder<CompanyDto> builder,
+                                                    string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page.AddDropdown(x => x.ContactData,
                                 b => b
                                     .HasTitle("Dropdown  2 Title (desc)")
                                     .HasDescription("Dropdown 2 description")
@@ -132,7 +156,15 @@
                                     .AddChoice("DD2Val4", "Choice 4")
                                     .AddChoice("DD2Val5", "Choice 5")
                                     .SetChoicesOrder(SurveyChoicesOrderEnum.desc))
-                        .AddDropdown(x => x.ContactData,
+                );
+        }
+
+        public static void Get_1Page_DropdownRandom(SurveyBuilder<CompanyDto> builder,
+                                                    string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page.AddDropdown(x => x.ContactData,
                                 b => b
                                     .HasTitle("Dropdown  3 Title (random)")
                                     .HasDescription("Dropdown 3 description")

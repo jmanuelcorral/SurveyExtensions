@@ -117,6 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Checkbox1TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"asc","colCount":1,"choices":[{"value":"CB1Val1","text":"Choice 1"},{"value":"CB1Val2","text":"Choice 2"},{"value":"CB1Val3","text":"Choice 3"},{"value":"CB1Val4","text":"Choice 4"},{"value":"CB1Val5","text":"Choice 5"}],"otherText":"Other choice text","hasSelectAll":true,"selectAllText":"Select All","hasNone":true,"noneText":"Select none","type":"checkbox","title":"Choice 1 Title (asc) - All - None","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Checkbox2TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"desc","colCount":2,"choices":[{"value":"CB2Val1","text":"Choice 1"},{"value":"CB2Val2","text":"Choice 2"},{"value":"CB2Val3","text":"Choice 3"},{"value":"CB2Val4","text":"Choice 4"},{"value":"CB2Val5","text":"Choice 5"}],"otherText":"Other choice text","hasSelectAll":true,"selectAllText":"Select All","hasNone":false,"noneText":null,"type":"checkbox","title":"Choice 2 Title (desc) - All","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Checkbox3TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"asc","colCount":1,"choices":[{"value":"CB1Val1","text":"Choice 1"},{"value":"CB1Val2","text":"Choice 2"},{"value":"CB1Val3","text":"Choice 3"},{"value":"CB1Val4","text":"Choice 4"},{"value":"CB1Val5","text":"Choice 5"}],"otherText":"Other choice text","hasSelectAll":true,"selectAllText":"Select All","hasNone":true,"noneText":"Select none","type":"checkbox","title":"Choice 1 Title (asc) - All - None","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Checkbox 3","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="CommentTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"placeHolder":"entra los datos de contacto","rows":7,"type":"comment","title":"Datos de contacto","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true},{"placeHolder":"placeholder 2","rows":14,"type":"comment","title":"Datos de contacto 2","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":false}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Dropdown1TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"random","colCount":3,"hasOther":false,"otherText":null,"choices":[{"value":"RG3Val1","text":"Choice 1"},{"value":"RG3Val2","text":"Choice 2"},{"value":"RG3Val3","text":"Choice 3"},{"value":"RG3Val4","text":"Choice 4"},{"value":"RG3Val5","text":"Choice 5"}],"type":"radiogroup","title":"Radiogroup  3 Title (random)","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Dropdown 1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Dropdown2TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"desc","choices":[{"value":"DD2Val1","text":"Choice 1"},{"value":"DD2Val2","text":"Choice 2"},{"value":"DD2Val3","text":"Choice 3"},{"value":"DD2Val4","text":"Choice 4"},{"value":"DD2Val5","text":"Choice 5"}],"hasOther":false,"otherText":null,"optionCaption":null,"type":"dropdown","title":"Dropdown  2 Title (desc)","description":"Dropdown 2 description","name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Dropdown 1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Dropdown3TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"random","choices":[{"value":"DD3Val1","text":"Choice 1"},{"value":"DD3Val2","text":"Choice 2"},{"value":"DD3Val3","text":"Choice 3"},{"value":"DD3Val4","text":"Choice 4"},{"value":"DD3Val5","text":"Choice 5"}],"hasOther":false,"otherText":null,"optionCaption":null,"type":"dropdown","title":"Dropdown  3 Title (random)","description":"Dropdown 3 description","name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Dropdown 1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Radiogroup1TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"asc","colCount":1,"hasOther":true,"otherText":"Other choice text","choices":[{"value":"RG1Val1","text":"Choice 1"},{"value":"RG1Val2","text":"Choice 2"},{"value":"RG1Val3","text":"Choice 3"},{"value":"RG1Val4","text":"Choice 4"},{"value":"RG1Val5","text":"Choice 5"}],"type":"radiogroup","title":"Radiogroup 1 Title (asc)","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Radiogroup2TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":null,"colCount":2,"hasOther":false,"otherText":null,"choices":[{"value":"RG2Val1","text":"Choice 1"},{"value":"RG2Val2","text":"Choice 2"},{"value":"RG2Val3","text":"Choice 3"},{"value":"RG2Val4","text":"Choice 4"},{"value":"RG2Val5","text":"Choice 5"}],"type":"radiogroup","title":"Radiogroup  2 Title (desc)","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="Radiogroup3TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"choicesOrder":"random","colCount":3,"hasOther":false,"otherText":null,"choices":[{"value":"RG3Val1","text":"Choice 1"},{"value":"RG3Val2","text":"Choice 2"},{"value":"RG3Val3","text":"Choice 3"},{"value":"RG3Val4","text":"Choice 4"},{"value":"RG3Val5","text":"Choice 5"}],"type":"radiogroup","title":"Radiogroup  3 Title (random)","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="RatingTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"rateMin":1,"rateMax":10,"rateStep":1,"rateValues":[],"minRateDescription":null,"maxRateDescription":null,"type":"rating","title":"Rating with values","description":"","name":"IsLegalPerson","visible":true,"isRequired":false,"startWithNewLine":true},{"rateMin":1,"rateMax":5,"rateStep":1,"rateValues":[{"value":"RTVal1","text":"Val 1"},{"value":"RTVal2","text":"Val 2"},{"value":"RTVal3","text":"Val 3"},{"value":"RTVal4","text":"Val 4"},{"value":"RTVal5","text":"Val 5"},{"value":"RTVal6","text":"Val 6"},{"value":"RTVal7","text":"Val 7"},{"value":"RTVal8","text":"Val 8"}],"minRateDescription":null,"maxRateDescription":null,"type":"rating","title":"Rating with options","description":null,"name":"IsLegalPerson","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
+  <data name="SingleInputTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"placeHolder":"Document Id Card","inputType":"text","type":"text","title":"Put Here your DNI","description":null,"name":"DocumentId","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
   <data name="test1" xml:space="preserve">
     <value>{"pages":[{"name":"Page1","elements":[{"placeHolder":"Put Here your DNI","inputType":"text","type":"text","title":"Document Id Card","isRequired":false,"name":"DocumentId"}]}]}</value>
   </data>

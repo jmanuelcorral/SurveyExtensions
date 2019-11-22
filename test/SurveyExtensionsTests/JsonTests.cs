@@ -23,7 +23,7 @@ namespace SurveyExtensionsTests
 
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.test1);
+            jsonextracted.Should().Be(jsoncollections.SingleInputTestExtractedJson);
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace SurveyExtensionsTests
 
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.test1);
+            jsonextracted.Should().Be(jsoncollections.CommentTestExtractedJson);
         }
 
         [Fact]
@@ -67,39 +67,97 @@ namespace SurveyExtensionsTests
 
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.test1);
+            jsonextracted.Should().Be(jsoncollections.RatingTestExtractedJson);
         }
 
         [Fact]
-        public void CheckboxWithAllWithNoneSortedAscendingTest()
+        public void Checkbox1TestWithAllWithNoneSortedAscending()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-            Factory.BulderFactory.Get_1Page_CheckboxWithAllWithNoneSortedAscending(companyBuilder, "Checkbox 1");
+            Factory.BulderFactory.Get_1Page_CheckboxWithAllWithNoneSortedAscending(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.test1);
+            jsonextracted.Should().Be(jsoncollections.Checkbox1TestExtractedJson);
         }
 
         [Fact]
-        public void CheckboxWithAllSortedDescendingTest()
+        public void Checkbox2TestWithAllSortedDescending()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-            Factory.BulderFactory.Get_1Page_CheckboxWithAllSortedDescending(companyBuilder, "Checkbox 2");
+            Factory.BulderFactory.Get_1Page_CheckboxWithAllSortedDescending(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.test1);
+            jsonextracted.Should().Be(jsoncollections.Checkbox2TestExtractedJson);
         }
 
         [Fact]
-        public void CheckboxWithAllWithNoneSortedAscending()
+        public void Checkbox3TestWithAllWithNoneSortedAscending()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_CheckboxWithAllWithNoneSortedAscending(companyBuilder, "Checkbox 3");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.test1);
+            jsonextracted.Should().Be(jsoncollections.Checkbox3TestExtractedJson);
         }
 
+        [Fact]
+        public void Radiogroup1TestAscending()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_RadiogroupAscending(companyBuilder, "Page1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.Radiogroup1TestExtractedJson);
+        }
 
+        [Fact]
+        public void Radiogroup2TestDescending()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_RadiogroupDescending(companyBuilder, "Page1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.Radiogroup2TestExtractedJson);
+        }
+
+        [Fact]
+        public void Radiogroup3TestRandom()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_RadiogroupRandom(companyBuilder, "Page1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.Radiogroup3TestExtractedJson);
+        }
+
+        [Fact]
+        public void Dromdowm1TestAscending()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_RadiogroupRandom(companyBuilder, "Dropdown 1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.Dropdown1TestExtractedJson);
+        }
+
+        [Fact]
+        public void Dromdowm2TestDescending()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_DropdownDescending(companyBuilder, "Dropdown 1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.Dropdown2TestExtractedJson);
+        }
+
+        [Fact]
+        public void Dromdowm3TestRandom()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_DropdownRandom(companyBuilder, "Dropdown 1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.Dropdown3TestExtractedJson);
+        }
     }
 }
