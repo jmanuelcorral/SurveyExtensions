@@ -176,5 +176,56 @@
                                     .SetChoicesOrder(SurveyChoicesOrderEnum.random))
                 );
         }
+
+        public static void Get_1Page_ImagePickerAscending(SurveyBuilder<CompanyDto> builder,
+                                                    string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page.AddImagePickerInput(x => x.ContactData,
+                                b => b
+                                    .HasTitle("Image Picker 1 Title (asc)")
+                                    .AddChoice("IP1Val1", "Lion", "https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg")
+                                    .AddChoice("IP1Val2", "Giraffe", "https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg")
+                                    .AddChoice("IP1Val3", "Panda", "https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg")
+                                    .AddChoice("IP1Val4", "Camel", "https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg")
+                                    .HasColumnCount(0)
+                                    .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
+                );
+        }
+
+        public static void Get_1Page_ImagePickerDescending(SurveyBuilder<CompanyDto> builder,
+                                            string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page.AddImagePickerInput(x => x.ContactData,
+                                b => b
+                                    .HasTitle("Image Picker 1 Title (asc)")
+                                    .AddChoice("IP1Val1", "Lion", "https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg")
+                                    .AddChoice("IP1Val2", "Giraffe", "https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg")
+                                    .AddChoice("IP1Val3", "Panda", "https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg")
+                                    .AddChoice("IP1Val4", "Camel", "https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg")
+                                    .HasColumnCount(2)
+                                    .SetChoicesOrder(SurveyChoicesOrderEnum.desc))
+                );
+        }
+
+        public static void Get_1Page_ImagePickerRandom(SurveyBuilder<CompanyDto> builder,
+                                            string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page.AddImagePickerInput(x => x.ContactData,
+                                b => b
+                                    .HasTitle("Image Picker 1 Title (asc)")
+                                    .AddChoice("IP1Val1", "Lion", "https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg")
+                                    .AddChoice("IP1Val2", "Giraffe", "https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg")
+                                    .AddChoice("IP1Val3", "Panda", "https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg")
+                                    .AddChoice("IP1Val4", "Camel", "https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg")
+                                    .HasColumnCount(0)
+                                    .SetChoicesOrder(SurveyChoicesOrderEnum.random))
+                );
+        }
     }
 }

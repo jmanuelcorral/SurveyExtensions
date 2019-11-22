@@ -134,7 +134,7 @@ namespace SurveyExtensionsTests
         public void Dromdowm1TestAscending()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-            Factory.BulderFactory.Get_1Page_RadiogroupRandom(companyBuilder, "Dropdown 1");
+            Factory.BulderFactory.Get_1Page_RadiogroupRandom(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             jsonextracted.Should().Be(jsoncollections.Dropdown1TestExtractedJson);
@@ -144,7 +144,7 @@ namespace SurveyExtensionsTests
         public void Dromdowm2TestDescending()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-            Factory.BulderFactory.Get_1Page_DropdownDescending(companyBuilder, "Dropdown 1");
+            Factory.BulderFactory.Get_1Page_DropdownDescending(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             jsonextracted.Should().Be(jsoncollections.Dropdown2TestExtractedJson);
@@ -154,10 +154,40 @@ namespace SurveyExtensionsTests
         public void Dromdowm3TestRandom()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-            Factory.BulderFactory.Get_1Page_DropdownRandom(companyBuilder, "Dropdown 1");
+            Factory.BulderFactory.Get_1Page_DropdownRandom(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             jsonextracted.Should().Be(jsoncollections.Dropdown3TestExtractedJson);
+        }
+
+        [Fact]
+        public void ImagePicker1TestAscending()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_ImagePickerAscending(companyBuilder, "Page1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.ImagePicker1TestExtractedResult);
+        }
+
+        [Fact]
+        public void ImagePicker2TestDescending()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_ImagePickerDescending(companyBuilder, "Page1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.ImagePicker2TestExtractedResult);
+        }
+
+        [Fact]
+        public void ImagePicker3TestRandom()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            Factory.BulderFactory.Get_1Page_ImagePickerRandom(companyBuilder, "Page1");
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.ImagePicker3TestExtractedResult);
         }
     }
 }
