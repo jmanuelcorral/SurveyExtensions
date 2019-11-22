@@ -39,16 +39,5 @@ namespace SurveyExtensionsTests
             myBuildedElements.Pages.Count.Should().Be(3);
         }
 
-        [Fact]
-        public void TestBuilders()
-        {
-            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-
-            Factory.BulderFactory.Get_1Page_3Checkbox(companyBuilder, "Checkbox Page");
-            Factory.BulderFactory.Get_1Page_3Radiogroup(companyBuilder, "Radiogroup Page");
-            Factory.BulderFactory.Get_1Page_3Dropdown(companyBuilder, "DropDown Page");
-            var myBuildedElements = companyBuilder.Build();
-            myBuildedElements.Pages.Count.Should().Be(3);
-        }
     }
 }

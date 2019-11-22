@@ -7,25 +7,32 @@
 
     public static class BulderFactory
     {
-        public static void Get_1Page_3Checkbox(SurveyBuilder<CompanyDto> builder,
-                                                                    string pageName)
+        public static void Get_1Page_CheckboxWithAllWithNoneSortedAscending
+            (SurveyBuilder<CompanyDto> builder,string pageName)
         {
             builder.AddPage(pageName,
-                    page =>
-                        page.AddCheckboxInput(x => x.ContactData,
-                                b => b
-                                    .HasTitle("Choice 1 Title (asc) - All - None")
-                                    .AddChoice("CB1Val1", "Choice 1")
-                                    .AddChoice("CB1Val2", "Choice 2")
-                                    .AddChoice("CB1Val3", "Choice 3")
-                                    .AddChoice("CB1Val4", "Choice 4")
-                                    .AddChoice("CB1Val5", "Choice 5")
-                                    .HasColumnCount(1)
-                                    .HasOtherChoice("Other choice text")
-                                    .HasSelectAllChoice("Select All")
-                                    .HasSelectNoneChoice("Select none")
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
-                        .AddCheckboxInput(x => x.ContactData,
+                page =>
+                page.AddCheckboxInput(x => x.ContactData,
+                    b => b
+                        .HasTitle("Choice 1 Title (asc) - All - None")
+                        .AddChoice("CB1Val1", "Choice 1")
+                        .AddChoice("CB1Val2", "Choice 2")
+                        .AddChoice("CB1Val3", "Choice 3")
+                        .AddChoice("CB1Val4", "Choice 4")
+                        .AddChoice("CB1Val5", "Choice 5")
+                        .HasColumnCount(1)
+                        .HasOtherChoice("Other choice text")
+                        .HasSelectAllChoice("Select All")
+                        .HasSelectNoneChoice("Select none")
+                        .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
+            );
+        }
+
+        public static void Get_1Page_CheckboxWithAllSortedDescending
+            (SurveyBuilder<CompanyDto> builder, string pageName)
+        {
+            builder.AddPage(pageName,
+                page =>page.AddCheckboxInput(x => x.ContactData,
                                 b => b
                                     .HasTitle("Choice 2 Title (desc) - All")
                                     .AddChoice("CB2Val1", "Choice 1")
@@ -37,6 +44,15 @@
                                     .HasOtherChoice("Other choice text")
                                     .HasSelectAllChoice("Select All")
                                     .SetChoicesOrder(SurveyChoicesOrderEnum.desc))
+            );
+        }
+
+        public static void Get_1Page_CheckboxWithNoneSortedRandom
+            (SurveyBuilder<CompanyDto> builder, string pageName)
+        {
+            builder.AddPage(pageName,
+                    page =>
+                        page
                         .AddCheckboxInput(x => x.ContactData,
                                 b => b
                                     .HasTitle("Choice 3 Title (random) - None")
