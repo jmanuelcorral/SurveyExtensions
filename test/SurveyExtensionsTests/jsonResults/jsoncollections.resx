@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BooleanTestExtractedResult" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"label":"Boolean label","labelTrue":"True","labelFalse":"False","type":"boolean","title":null,"description":null,"name":"IsLegalPerson","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
   <data name="Checkbox1TestExtractedJson" xml:space="preserve">
     <value>{"pages":[{"elements":[{"choicesOrder":"asc","colCount":1,"choices":[{"value":"CB1Val1","text":"Choice 1"},{"value":"CB1Val2","text":"Choice 2"},{"value":"CB1Val3","text":"Choice 3"},{"value":"CB1Val4","text":"Choice 4"},{"value":"CB1Val5","text":"Choice 5"}],"otherText":"Other choice text","hasSelectAll":true,"selectAllText":"Select All","hasNone":true,"noneText":"Select none","type":"checkbox","title":"Choice 1 Title (asc) - All - None","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
   </data>

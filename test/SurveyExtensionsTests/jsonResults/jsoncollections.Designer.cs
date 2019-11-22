@@ -61,6 +61,15 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;label&quot;:&quot;Boolean label&quot;,&quot;labelTrue&quot;:&quot;True&quot;,&quot;labelFalse&quot;:&quot;False&quot;,&quot;type&quot;:&quot;boolean&quot;,&quot;title&quot;:null,&quot;description&quot;:null,&quot;name&quot;:&quot;IsLegalPerson&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}],&quot;name&quot;:&quot;Page1&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}]}.
+        /// </summary>
+        internal static string BooleanTestExtractedResult {
+            get {
+                return ResourceManager.GetString("BooleanTestExtractedResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:1,&quot;choices&quot;:[{&quot;value&quot;:&quot;CB1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;CB1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;CB1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;CB1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;CB1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;hasSelectAll&quot;:true,&quot;selectAllText&quot;:&quot;Select All&quot;,&quot;hasNone&quot;:true,&quot;noneText&quot;:&quot;Select none&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;title&quot;:&quot;Choice 1 Title (asc) - All - None&quot;,&quot;description&quot;:null,&quot;name&quot;:&quot;ContactData&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:f [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Checkbox1TestExtractedJson {

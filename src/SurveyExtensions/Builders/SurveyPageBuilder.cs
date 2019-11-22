@@ -125,7 +125,6 @@
                         .HasRateStep(rateStep));
         }
 
-
         public SurveyPageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyImagePickerItemBuilder<TEntity>> imagePickerBuilder)
         {
             TEntity mEntity = new TEntity();
@@ -138,6 +137,22 @@
         }
 
         public SurveyPageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        {
+            return AddImagePickerInput(expression, x => x.HasTitle(title));
+        }
+
+        public SurveyPageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyBooleanItemBuilder<TEntity>> booleanBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new SurveyBooleanItemBuilder<TEntity>();
+            booleanBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
+        public SurveyPageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string abel, string labelTrue, string labelNo)
         {
             return AddImagePickerInput(expression, x => x.HasTitle(title));
         }
