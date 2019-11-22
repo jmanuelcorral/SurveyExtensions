@@ -167,7 +167,7 @@ namespace SurveyExtensionsTests
             Factory.BulderFactory.Get_1Page_ImagePickerAscending(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.ImagePicker1TestExtractedResult);
+            jsonextracted.Should().Be(jsoncollections.ImagePicker1TestExtractedJson);
         }
 
         [Fact]
@@ -177,7 +177,7 @@ namespace SurveyExtensionsTests
             Factory.BulderFactory.Get_1Page_ImagePickerDescending(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.ImagePicker2TestExtractedResult);
+            jsonextracted.Should().Be(jsoncollections.ImagePicker2TestExtractedJson);
         }
 
         [Fact]
@@ -187,7 +187,7 @@ namespace SurveyExtensionsTests
             Factory.BulderFactory.Get_1Page_ImagePickerRandom(companyBuilder, "Page1");
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.ImagePicker3TestExtractedResult);
+            jsonextracted.Should().Be(jsoncollections.ImagePicker3TestExtractedJson);
         }
 
         [Fact]
@@ -202,7 +202,7 @@ namespace SurveyExtensionsTests
                      ));
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.BooleanTestExtractedResult);
+            jsonextracted.Should().Be(jsoncollections.BooleanTestExtractedJson);
         }
 
         [Fact]
@@ -215,7 +215,20 @@ namespace SurveyExtensionsTests
                      ));
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
-            jsonextracted.Should().Be(jsoncollections.HtmlEditorTestExtractedResult);
+            jsonextracted.Should().Be(jsoncollections.HtmlEditorTestExtractedJson);
+        }
+
+        [Fact]
+        public void FileTest()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            companyBuilder.AddPage("Page1",
+                p => p.AddFile(c => c.ContactData,
+                l => l.HasMaxSize(250)
+                     ));
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.FileExtractedJson);
         }
     }
 }

@@ -63,9 +63,9 @@ namespace SurveyExtensionsTests.jsonResults {
         /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;label&quot;:&quot;Boolean label&quot;,&quot;labelTrue&quot;:&quot;True&quot;,&quot;labelFalse&quot;:&quot;False&quot;,&quot;type&quot;:&quot;boolean&quot;,&quot;title&quot;:null,&quot;description&quot;:null,&quot;name&quot;:&quot;IsLegalPerson&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}],&quot;name&quot;:&quot;Page1&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}]}.
         /// </summary>
-        internal static string BooleanTestExtractedResult {
+        internal static string BooleanTestExtractedJson {
             get {
-                return ResourceManager.GetString("BooleanTestExtractedResult", resourceCulture);
+                return ResourceManager.GetString("BooleanTestExtractedJson", resourceCulture);
             }
         }
         
@@ -133,38 +133,47 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;maxSize&quot;:250,&quot;type&quot;:&quot;file&quot;,&quot;title&quot;:null,&quot;description&quot;:null,&quot;name&quot;:&quot;ContactData&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}],&quot;name&quot;:&quot;Page1&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}]}.
+        /// </summary>
+        internal static string FileExtractedJson {
+            get {
+                return ResourceManager.GetString("FileExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;html&quot;:&quot;&lt;h1&gt;H1 content&lt;/h1&gt;&lt;p&gt;Paragraph&lt;/p&gt;&quot;,&quot;type&quot;:&quot;html&quot;,&quot;title&quot;:null,&quot;description&quot;:null,&quot;name&quot;:&quot;ContactData&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}],&quot;name&quot;:&quot;Page1&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}]}.
         /// </summary>
-        internal static string HtmlEditorTestExtractedResult {
+        internal static string HtmlEditorTestExtractedJson {
             get {
-                return ResourceManager.GetString("HtmlEditorTestExtractedResult", resourceCulture);
+                return ResourceManager.GetString("HtmlEditorTestExtractedJson", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:0,&quot;choices&quot;:[{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg&quot;,&quot;value&quot;:&quot;IP1Val1&quot;,&quot;text&quot;:&quot;Lion&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg&quot;,&quot;value&quot;:&quot;IP1Val2&quot;,&quot;text&quot;:&quot;Giraffe&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg&quot;,&quot;value&quot;:&quot;IP1Val3&quot;,&quot;text&quot;:&quot;Panda&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg&quot;,&quot;value&quot;:&quot;IP [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ImagePicker1TestExtractedResult {
+        internal static string ImagePicker1TestExtractedJson {
             get {
-                return ResourceManager.GetString("ImagePicker1TestExtractedResult", resourceCulture);
+                return ResourceManager.GetString("ImagePicker1TestExtractedJson", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;desc&quot;,&quot;colCount&quot;:2,&quot;choices&quot;:[{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg&quot;,&quot;value&quot;:&quot;IP1Val1&quot;,&quot;text&quot;:&quot;Lion&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg&quot;,&quot;value&quot;:&quot;IP1Val2&quot;,&quot;text&quot;:&quot;Giraffe&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg&quot;,&quot;value&quot;:&quot;IP1Val3&quot;,&quot;text&quot;:&quot;Panda&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg&quot;,&quot;value&quot;:&quot;I [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ImagePicker2TestExtractedResult {
+        internal static string ImagePicker2TestExtractedJson {
             get {
-                return ResourceManager.GetString("ImagePicker2TestExtractedResult", resourceCulture);
+                return ResourceManager.GetString("ImagePicker2TestExtractedJson", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;random&quot;,&quot;colCount&quot;:0,&quot;choices&quot;:[{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg&quot;,&quot;value&quot;:&quot;IP1Val1&quot;,&quot;text&quot;:&quot;Lion&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg&quot;,&quot;value&quot;:&quot;IP1Val2&quot;,&quot;text&quot;:&quot;Giraffe&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg&quot;,&quot;value&quot;:&quot;IP1Val3&quot;,&quot;text&quot;:&quot;Panda&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg&quot;,&quot;value&quot;: [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ImagePicker3TestExtractedResult {
+        internal static string ImagePicker3TestExtractedJson {
             get {
-                return ResourceManager.GetString("ImagePicker3TestExtractedResult", resourceCulture);
+                return ResourceManager.GetString("ImagePicker3TestExtractedJson", resourceCulture);
             }
         }
         

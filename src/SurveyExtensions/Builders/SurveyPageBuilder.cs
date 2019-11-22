@@ -169,6 +169,16 @@
             return this;
         }
 
+        public SurveyPageBuilder<TEntity> AddFile<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyFileItemBuilder<TEntity>> fileBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new SurveyFileItemBuilder<TEntity>();
+            fileBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
 
         public SurveyPage Build()
         {
