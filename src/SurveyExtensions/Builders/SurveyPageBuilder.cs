@@ -157,6 +157,19 @@
             return AddImagePickerInput(expression, x => x.HasTitle(title));
         }
 
+
+        public SurveyPageBuilder<TEntity> AddHtmlEditor<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyHtmlEditorItemBuilder<TEntity>> htmlEditorBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new SurveyHtmlEditorItemBuilder<TEntity>();
+            htmlEditorBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
+
         public SurveyPage Build()
         {
             foreach (var surveyItemBuilder in elementsBuilder)

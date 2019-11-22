@@ -194,8 +194,8 @@ namespace SurveyExtensionsTests
         public void BooleanTest()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-            companyBuilder.AddPage("Page1", 
-                p => p.AddBooleanInput(c=>c.IsLegalPerson, 
+            companyBuilder.AddPage("Page1",
+                p => p.AddBooleanInput(c => c.IsLegalPerson,
                 l => l.HasLabel("Boolean label")
                       .HasLabelTrue("True")
                       .HasLabelFalse("False")
@@ -203,6 +203,19 @@ namespace SurveyExtensionsTests
             var myBuildedElements = companyBuilder.Build();
             var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             jsonextracted.Should().Be(jsoncollections.BooleanTestExtractedResult);
+        }
+
+        [Fact]
+        public void HtmlEditornTest()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            companyBuilder.AddPage("Page1",
+                p => p.AddHtmlEditor(c => c.ContactData,
+                l => l.HasHtml("<h1>H1 content</h1><p>Paragraph</p>")
+                     ));
+            var myBuildedElements = companyBuilder.Build();
+            var jsonextracted = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            jsonextracted.Should().Be(jsoncollections.HtmlEditorTestExtractedResult);
         }
     }
 }

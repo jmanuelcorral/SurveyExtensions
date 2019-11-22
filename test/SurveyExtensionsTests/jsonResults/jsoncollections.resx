@@ -141,6 +141,9 @@
   <data name="Dropdown3TestExtractedJson" xml:space="preserve">
     <value>{"pages":[{"elements":[{"choicesOrder":"random","choices":[{"value":"DD3Val1","text":"Choice 1"},{"value":"DD3Val2","text":"Choice 2"},{"value":"DD3Val3","text":"Choice 3"},{"value":"DD3Val4","text":"Choice 4"},{"value":"DD3Val5","text":"Choice 5"}],"hasOther":false,"otherText":null,"optionCaption":null,"type":"dropdown","title":"Dropdown  3 Title (random)","description":"Dropdown 3 description","name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
   </data>
+  <data name="HtmlEditorTestExtractedResult" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"html":"&lt;h1&gt;H1 content&lt;/h1&gt;&lt;p&gt;Paragraph&lt;/p&gt;","type":"html","title":null,"description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
+  </data>
   <data name="ImagePicker1TestExtractedResult" xml:space="preserve">
     <value>{"pages":[{"elements":[{"choicesOrder":"asc","colCount":0,"choices":[{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg","value":"IP1Val1","text":"Lion"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg","value":"IP1Val2","text":"Giraffe"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg","value":"IP1Val3","text":"Panda"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg","value":"IP1Val4","text":"Camel"}],"type":"imagepicker","title":"Image Picker 1 Title (asc)","description":null,"name":"ContactData","visible":true,"isRequired":false,"startWithNewLine":true}],"name":"Page1","visible":true,"isRequired":false,"startWithNewLine":true}]}</value>
   </data>

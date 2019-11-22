@@ -133,6 +133,15 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;html&quot;:&quot;&lt;h1&gt;H1 content&lt;/h1&gt;&lt;p&gt;Paragraph&lt;/p&gt;&quot;,&quot;type&quot;:&quot;html&quot;,&quot;title&quot;:null,&quot;description&quot;:null,&quot;name&quot;:&quot;ContactData&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}],&quot;name&quot;:&quot;Page1&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true}]}.
+        /// </summary>
+        internal static string HtmlEditorTestExtractedResult {
+            get {
+                return ResourceManager.GetString("HtmlEditorTestExtractedResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:0,&quot;choices&quot;:[{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg&quot;,&quot;value&quot;:&quot;IP1Val1&quot;,&quot;text&quot;:&quot;Lion&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg&quot;,&quot;value&quot;:&quot;IP1Val2&quot;,&quot;text&quot;:&quot;Giraffe&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg&quot;,&quot;value&quot;:&quot;IP1Val3&quot;,&quot;text&quot;:&quot;Panda&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg&quot;,&quot;value&quot;:&quot;IP [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ImagePicker1TestExtractedResult {
