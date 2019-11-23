@@ -2,33 +2,34 @@
 {
     using System;
     using Elements;
+    using SurveyExtensions.Elements.Questions;
 
-    public class SurveyHtmlEditorItemBuilder<TEntity> :
-        SurveyItemBuilderBase<TEntity, SurveyHtmlEditorItem>,
+    public class FileQuestionBuilder<TEntity> :
+        QuestionBuilderBase<TEntity, FileQuestion>,
         IBuilder<SurveyItem> where TEntity : new()
     {
 
-        public SurveyHtmlEditorItemBuilder<TEntity> HasName(string value)
+        public FileQuestionBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;
             return this;
         }
 
-        public SurveyHtmlEditorItemBuilder<TEntity> IsHidden()
+        public FileQuestionBuilder<TEntity> IsHidden()
         {
             _item.Visible = false;
             return this;
         }
 
-        public SurveyHtmlEditorItemBuilder<TEntity> ContinueInSameLine()
+        public FileQuestionBuilder<TEntity> ContinueInSameLine()
         {
             _item.StartWithNewLine = false;
             return this;
         }
 
-        public SurveyHtmlEditorItemBuilder<TEntity> HasHtml(string html)
+        public FileQuestionBuilder<TEntity> HasMaxSize(int maxSize)
         {
-            _item.Html = html;
+            _item.MaxSize = maxSize;
             return this;
         }
 

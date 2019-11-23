@@ -1,8 +1,8 @@
-﻿namespace SurveyExtensions.Elements
+﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class SurveyBooleanItem : SurveyPageElement
+    public class BooleanQuestion : SurveyQuestion
     {
-        public SurveyBooleanItem()
+        public BooleanQuestion()
         {
             Type = "boolean";
         }

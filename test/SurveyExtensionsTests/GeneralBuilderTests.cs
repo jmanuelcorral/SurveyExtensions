@@ -6,6 +6,7 @@ namespace SurveyExtensionsTests
     using FluentAssertions;
     using SurveyExtensions.Builders;
     using SurveyExtensions.Elements;
+    using SurveyExtensions.Enums;
 
     public class GeneralBuilderTests
     {
@@ -16,22 +17,22 @@ namespace SurveyExtensionsTests
 
             companyBuilder.AddPage("Pagina 1", 
                     page => 
-                        page.AddSingleInput(x => x.DocumentId,
+                        page.AddSingleInputQuestion(x => x.DocumentId,
                                 b => b
                                     .HasTitle("Dni")
                                     .HasPlaceHolder("Ponga aqui su dni")
-                                    .SetInputType(SurveyInputType.Text))
-                            .AddSingleInput(x=> x.ContactData,
+                                    .SetInputType(SingleInputTypesEnum.Text))
+                            .AddSingleInputQuestion(x=> x.ContactData,
                                 b=> b
                                     .HasTitle("Datos de Contacto")
                                     .HasPlaceHolder("Ponga Aqui sus Datos de Contacto"))
                 )
                 .AddPage("Pagina 2", page=> 
-                    page.AddSingleInput(x=> x.IsCashReceiptCriteria, b=> b.SetInputType(SurveyInputType.Email))
+                    page.AddSingleInputQuestion(x=> x.IsCashReceiptCriteria, b=> b.SetInputType(SingleInputTypesEnum.Email))
                 );
 
             companyBuilder.AddPage("MiPaginaMolona",
-                p => p.AddSingleInput(c => c.DocumentId, "placeholderMolon", "MiDni", SurveyInputType.Text));
+                p => p.AddSingleInputQuestion(c => c.DocumentId, "placeholderMolon", "MiDni", SingleInputTypesEnum.Text));
                 
             
             

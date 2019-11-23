@@ -5,49 +5,50 @@
     using System.Linq.Expressions;
     using Elements;
     using Helpers;
+    using SurveyExtensions.Enums;
 
-    public class SurveyPageBuilder<TEntity>: IBuilder<SurveyPage> where TEntity : new()
+    public class PageBuilder<TEntity>: IBuilder<SurveyPage> where TEntity : new()
     {
         private SurveyPage _item = new SurveyPage();
         private List<IBuilder<SurveyItem>> elementsBuilder = new List<IBuilder<SurveyItem>>();
         
-        public SurveyPageBuilder<TEntity> HasName(string name)
+        public PageBuilder<TEntity> HasName(string name)
         {
             _item.Name = name;
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddSingleInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyInputItemBuilder<TEntity>> inputBuilder)
+        public PageBuilder<TEntity> AddSingleInputQuestion<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SimgleItemQuestionBuilder<TEntity>> inputBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyInputItemBuilder<TEntity>();
+            var builder = new SimgleItemQuestionBuilder<TEntity>();
             inputBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddSingleInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, SurveyInputType inputType)
+        public PageBuilder<TEntity> AddSingleInputQuestion<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, SingleInputTypesEnum inputType)
         {
-            return AddSingleInput(expression, 
+            return AddSingleInputQuestion(expression, 
                 x => x.HasTitle(title)
                        .HasPlaceHolder(placeholder)
                        .SetInputType(inputType));
         }
 
-        public SurveyPageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyCommentItemBuilder<TEntity>> commentBuilder)
+        public PageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CommentQuestionBuilder<TEntity>> commentBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyCommentItemBuilder<TEntity>();
+            var builder = new CommentQuestionBuilder<TEntity>();
             commentBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, int rows)
+        public PageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, int rows)
         {
             return AddCommentInput(expression,
                 x => x.HasTitle(title)
@@ -55,66 +56,66 @@
                        .HasRows(7));
         }
 
-        public SurveyPageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyCheckboxItemBuilder<TEntity>> checkboxBuilder)
+        public PageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CheckboxQuestionBuilder<TEntity>> checkboxBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyCheckboxItemBuilder<TEntity>();
+            var builder = new CheckboxQuestionBuilder<TEntity>();
             checkboxBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        public PageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
         {
             return AddCheckboxInput(expression, x => x.HasTitle(title));
         }
 
-        public SurveyPageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyRadiogroupItemBuilder<TEntity>> radiogroupBuilder)
+        public PageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RadiogroupQuestionBuilder<TEntity>> radiogroupBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyRadiogroupItemBuilder<TEntity>();
+            var builder = new RadiogroupQuestionBuilder<TEntity>();
             radiogroupBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        public PageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
         {
             return AddRadiogroup(expression, x => x.HasTitle(title));
         }
 
-        public SurveyPageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyDropdownItemBuilder<TEntity>> dropDownBuilder)
+        public PageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<DropdownQuestionBuilder<TEntity>> dropDownBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyDropdownItemBuilder<TEntity>();
+            var builder = new DropdownQuestionBuilder<TEntity>();
             dropDownBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        public PageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
         {
             return AddRadiogroup(expression, x => x.HasTitle(title));
         }
 
-        public SurveyPageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyRatinItemBuilder<TEntity>> ratingBuilder)
+        public PageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RatingQuestionBuilder<TEntity>> ratingBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyRatinItemBuilder<TEntity>();
+            var builder = new RatingQuestionBuilder<TEntity>();
             ratingBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, 
+        public PageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, 
             string title, string description, int rateMin, int rateMax, int rateStep)
         {
             return AddRating(expression, 
@@ -125,55 +126,55 @@
                         .HasRateStep(rateStep));
         }
 
-        public SurveyPageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyImagePickerItemBuilder<TEntity>> imagePickerBuilder)
+        public PageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<ImagePickerQuestionBuilder<TEntity>> imagePickerBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyImagePickerItemBuilder<TEntity>();
+            var builder = new ImagePickerQuestionBuilder<TEntity>();
             imagePickerBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
+        public PageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
         {
             return AddImagePickerInput(expression, x => x.HasTitle(title));
         }
 
-        public SurveyPageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyBooleanItemBuilder<TEntity>> booleanBuilder)
+        public PageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<BooleanQuestionBuilder<TEntity>> booleanBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyBooleanItemBuilder<TEntity>();
+            var builder = new BooleanQuestionBuilder<TEntity>();
             booleanBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string abel, string labelTrue, string labelNo)
+        public PageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string abel, string labelTrue, string labelNo)
         {
             return AddImagePickerInput(expression, x => x.HasTitle(title));
         }
 
 
-        public SurveyPageBuilder<TEntity> AddHtmlEditor<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyHtmlEditorItemBuilder<TEntity>> htmlEditorBuilder)
+        public PageBuilder<TEntity> AddHtmlEditor<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<HtmlEditorQuestionBuilder<TEntity>> htmlEditorBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyHtmlEditorItemBuilder<TEntity>();
+            var builder = new HtmlEditorQuestionBuilder<TEntity>();
             htmlEditorBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
         }
 
-        public SurveyPageBuilder<TEntity> AddFile<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SurveyFileItemBuilder<TEntity>> fileBuilder)
+        public PageBuilder<TEntity> AddFile<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<FileQuestionBuilder<TEntity>> fileBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
-            var builder = new SurveyFileItemBuilder<TEntity>();
+            var builder = new FileQuestionBuilder<TEntity>();
             fileBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);

@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.ChoiceItems
 {
-    public class SurveyImagePickerChoice : SurveyChoice
+    public class ImagePickerChoice : Choice
     {
        
         public string ImageLink { get; set; }

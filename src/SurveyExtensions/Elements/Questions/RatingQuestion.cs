@@ -1,11 +1,12 @@
-﻿namespace SurveyExtensions.Elements.ChoiceItems
+﻿namespace SurveyExtensions.Elements.Questions
 {
+    using SurveyExtensions.Elements.ChoiceItems;
     using System.Collections.Generic;
 
-    public class SurveyRatingItem : SurveyPageElement
+    public class RatingQuestion : SurveyQuestion
     {
 
-        public SurveyRatingItem()
+        public RatingQuestion()
         {
             Type = "rating";
         }
@@ -14,7 +15,7 @@
         public int RateMax { get; set; } = 5;
         public int RateStep { get; set; } = 1;
 
-        public IList<SurveyChoice> RateValues { get; set; } = new List<SurveyChoice>();
+        public IList<Choice> RateValues { get; set; } = new List<Choice>();
 
         public string MinRateDescription { get; set; }
 

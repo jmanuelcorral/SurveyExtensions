@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.ChoiceItems
 {
-    public class SurveyChoice
+    public class Choice
     {
        
         public string Value { get; set; }

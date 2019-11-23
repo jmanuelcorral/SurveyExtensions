@@ -8,12 +8,12 @@
     public class SurveyBuilder<TEntity> where TEntity : new()
     {
         private readonly Survey survey = new Survey();
-        private readonly List<SurveyPageBuilder<TEntity>> _pageBuilders = new List<SurveyPageBuilder<TEntity>>();
+        private readonly List<PageBuilder<TEntity>> _pageBuilders = new List<PageBuilder<TEntity>>();
 
        
-        public SurveyBuilder<TEntity> AddPage(string pageName, Action<SurveyPageBuilder<TEntity>> pageBuilder)
+        public SurveyBuilder<TEntity> AddPage(string pageName, Action<PageBuilder<TEntity>> pageBuilder)
         {
-           var builder = new SurveyPageBuilder<TEntity>();
+           var builder = new PageBuilder<TEntity>();
            pageBuilder.Invoke(builder);
            builder.HasName(pageName);
            _pageBuilders.Add(builder);

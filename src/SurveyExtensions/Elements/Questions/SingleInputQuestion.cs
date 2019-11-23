@@ -1,8 +1,8 @@
-﻿namespace SurveyExtensions.Elements
+﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class SurveyInputItem : SurveyPageElement
+    public class SingleInputQuestion : SurveyQuestion
     {
-        public SurveyInputItem()
+        public SingleInputQuestion()
         {
             Type = "text";
             InputType = "text";

@@ -3,83 +3,85 @@
     using System;
     using Elements;
     using SurveyExtensions.Elements.ChoiceItems;
+    using SurveyExtensions.Elements.Questions;
+    using SurveyExtensions.Enums;
 
-    public class SurveyCheckboxItemBuilder<TEntity> : 
-        SurveyItemBuilderBase<TEntity, SurveyCheckboxItem>,
+    public class CheckboxQuestionBuilder<TEntity> : 
+        QuestionBuilderBase<TEntity, CheckboxQuestion>,
         IBuilder<SurveyItem> where TEntity : new()
     {
 
-        public SurveyCheckboxItemBuilder<TEntity> HasName(string value)
+        public CheckboxQuestionBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;
             return this;
         }
-        public SurveyCheckboxItemBuilder<TEntity> HasTitle(string value)
+        public CheckboxQuestionBuilder<TEntity> HasTitle(string value)
         {
             _item.Title = value;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasDescription(string value)
+        public CheckboxQuestionBuilder<TEntity> HasDescription(string value)
         {
             _item.Description = value;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> IsRequired()
+        public CheckboxQuestionBuilder<TEntity> IsRequired()
         {
             _item.IsRequired = true;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> IsHidden()
+        public CheckboxQuestionBuilder<TEntity> IsHidden()
         {
             _item.Visible = false;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> ContinueInSameLine()
+        public CheckboxQuestionBuilder<TEntity> ContinueInSameLine()
         {
             _item.StartWithNewLine = false;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasColumnCount(int value)
+        public CheckboxQuestionBuilder<TEntity> HasColumnCount(int value)
         {
             _item.ColCount = value;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> SetChoicesOrder(SurveyChoicesOrderEnum order)
+        public CheckboxQuestionBuilder<TEntity> SetChoicesOrder(ChoicesOrderEnum order)
         {
-            string enumName = Enum.GetName(typeof(SurveyChoicesOrderEnum), order);
+            string enumName = Enum.GetName(typeof(ChoicesOrderEnum), order);
             if (enumName != null) _item.ChoicesOrder = enumName.ToLowerInvariant();
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasOtherChoice(string choiceText)
+        public CheckboxQuestionBuilder<TEntity> HasOtherChoice(string choiceText)
         {
             _item.OtherText = choiceText;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasSelectAllChoice(string choiceText)
+        public CheckboxQuestionBuilder<TEntity> HasSelectAllChoice(string choiceText)
         {
             _item.HasSelectAll = true;
             _item.SelectAllText = choiceText;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> HasSelectNoneChoice(string choiceText)
+        public CheckboxQuestionBuilder<TEntity> HasSelectNoneChoice(string choiceText)
         {
             _item.HasNone = true;
             _item.NoneText = choiceText;
             return this;
         }
 
-        public SurveyCheckboxItemBuilder<TEntity> AddChoice(string choiceValue, string choiceText)
+        public CheckboxQuestionBuilder<TEntity> AddChoice(string choiceValue, string choiceText)
         {
-            _item.Choices.Add(new SurveyChoice() { Value = choiceValue, Text = choiceText });
+            _item.Choices.Add(new Choice() { Value = choiceValue, Text = choiceText });
             return this;
         }
 

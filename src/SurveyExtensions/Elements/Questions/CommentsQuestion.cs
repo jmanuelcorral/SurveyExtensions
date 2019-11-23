@@ -1,8 +1,8 @@
-﻿namespace SurveyExtensions.Elements
+﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class SurveyCommentItem : SurveyPageElement
+    public class CommentsQuestion : SurveyQuestion
     {
-        public SurveyCommentItem()
+        public CommentsQuestion()
         {
             Type = "comment";
         }

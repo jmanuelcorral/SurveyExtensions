@@ -1,7 +1,7 @@
 ﻿namespace SurveyExtensionsTests.Factory
 {
     using SurveyExtensions.Builders;
-    using SurveyExtensions.Elements.ChoiceItems;
+    using SurveyExtensions.Enums;
     using SurveyExtensionsTests.Dtos;
 
 
@@ -24,7 +24,7 @@
                         .HasOtherChoice("Other choice text")
                         .HasSelectAllChoice("Select All")
                         .HasSelectNoneChoice("Select none")
-                        .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
+                        .SetChoicesOrder(ChoicesOrderEnum.asc))
             );
         }
 
@@ -43,7 +43,7 @@
                                     .HasColumnCount(2)
                                     .HasOtherChoice("Other choice text")
                                     .HasSelectAllChoice("Select All")
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.desc))
+                                    .SetChoicesOrder(ChoicesOrderEnum.desc))
             );
         }
 
@@ -64,7 +64,7 @@
                                     .HasColumnCount(3)
                                     .HasOtherChoice("Other choice text")
                                     .HasSelectNoneChoice("Select none")
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.random))
+                                    .SetChoicesOrder(ChoicesOrderEnum.random))
                 );
         }
 
@@ -83,7 +83,7 @@
                                     .AddChoice("RG1Val5", "Choice 5")
                                     .HasColumnCount(1)
                                     .HasOtherChoice("Other choice text")
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
+                                    .SetChoicesOrder(ChoicesOrderEnum.asc))
                 );
         }
 
@@ -118,7 +118,7 @@
                                     .AddChoice("RG3Val4", "Choice 4")
                                     .AddChoice("RG3Val5", "Choice 5")
                                     .HasColumnCount(3)
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.random))
+                                    .SetChoicesOrder(ChoicesOrderEnum.random))
                 );
         }
 
@@ -137,7 +137,7 @@
                                     .AddChoice("DD1Val4", "Choice 4")
                                     .AddChoice("DD1Val5", "Choice 5")
                                     .HasOtherChoice("Other choice text")
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
+                                    .SetChoicesOrder(ChoicesOrderEnum.asc))
                 );
         }
 
@@ -155,7 +155,7 @@
                                     .AddChoice("DD2Val3", "Choice 3")
                                     .AddChoice("DD2Val4", "Choice 4")
                                     .AddChoice("DD2Val5", "Choice 5")
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.desc))
+                                    .SetChoicesOrder(ChoicesOrderEnum.desc))
                 );
         }
 
@@ -173,7 +173,7 @@
                                     .AddChoice("DD3Val3", "Choice 3")
                                     .AddChoice("DD3Val4", "Choice 4")
                                     .AddChoice("DD3Val5", "Choice 5")
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.random))
+                                    .SetChoicesOrder(ChoicesOrderEnum.random))
                 );
         }
 
@@ -190,7 +190,7 @@
                                     .AddChoice("IP1Val3", "Panda", "https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg")
                                     .AddChoice("IP1Val4", "Camel", "https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg")
                                     .HasColumnCount(0)
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.asc))
+                                    .SetChoicesOrder(ChoicesOrderEnum.asc))
                 );
         }
 
@@ -207,7 +207,7 @@
                                     .AddChoice("IP1Val3", "Panda", "https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg")
                                     .AddChoice("IP1Val4", "Camel", "https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg")
                                     .HasColumnCount(2)
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.desc))
+                                    .SetChoicesOrder(ChoicesOrderEnum.desc))
                 );
         }
 
@@ -224,7 +224,7 @@
                                     .AddChoice("IP1Val3", "Panda", "https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg")
                                     .AddChoice("IP1Val4", "Camel", "https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg")
                                     .HasColumnCount(0)
-                                    .SetChoicesOrder(SurveyChoicesOrderEnum.random))
+                                    .SetChoicesOrder(ChoicesOrderEnum.random))
                 );
         }
     }

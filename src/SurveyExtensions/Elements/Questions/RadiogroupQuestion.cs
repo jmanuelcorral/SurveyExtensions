@@ -1,11 +1,12 @@
-﻿namespace SurveyExtensions.Elements.ChoiceItems
+﻿namespace SurveyExtensions.Elements.Questions
 {
+    using SurveyExtensions.Elements.ChoiceItems;
     using System.Collections.Generic;
 
-    public class SurveyRadiogroupItem : SurveyPageElement
+    public class RadiogroupQuestion : SurveyQuestion
     {
 
-        public SurveyRadiogroupItem()
+        public RadiogroupQuestion()
         {
             Type = "radiogroup";
         }
@@ -15,7 +16,7 @@
         public bool HasOther { get; set; }
         public string OtherText { get; set; }
 
-        public IList<SurveyChoice> Choices { get; set; } = new List<SurveyChoice>();
+        public IList<Choice> Choices { get; set; } = new List<Choice>();
 
     }
 }

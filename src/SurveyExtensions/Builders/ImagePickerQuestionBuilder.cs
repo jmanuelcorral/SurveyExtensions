@@ -3,65 +3,67 @@
     using System;
     using Elements;
     using SurveyExtensions.Elements.ChoiceItems;
+    using SurveyExtensions.Elements.Questions;
+    using SurveyExtensions.Enums;
 
-    public class SurveyImagePickerItemBuilder<TEntity> : 
-        SurveyItemBuilderBase<TEntity, SurveyImagePickerItem>,
+    public class ImagePickerQuestionBuilder<TEntity> : 
+        QuestionBuilderBase<TEntity, ImagePickerQuestion>,
         IBuilder<SurveyItem> where TEntity : new()
     {
 
-        public SurveyImagePickerItemBuilder<TEntity> HasName(string value)
+        public ImagePickerQuestionBuilder<TEntity> HasName(string value)
         {
             _item.Name = value;
             return this;
         }
-        public SurveyImagePickerItemBuilder<TEntity> HasTitle(string value)
+        public ImagePickerQuestionBuilder<TEntity> HasTitle(string value)
         {
             _item.Title = value;
             return this;
         }
 
-        public SurveyImagePickerItemBuilder<TEntity> HasDescription(string value)
+        public ImagePickerQuestionBuilder<TEntity> HasDescription(string value)
         {
             _item.Description = value;
             return this;
         }
 
-        public SurveyImagePickerItemBuilder<TEntity> IsRequired()
+        public ImagePickerQuestionBuilder<TEntity> IsRequired()
         {
             _item.IsRequired = true;
             return this;
         }
 
-        public SurveyImagePickerItemBuilder<TEntity> IsHidden()
+        public ImagePickerQuestionBuilder<TEntity> IsHidden()
         {
             _item.Visible = false;
             return this;
         }
 
-        public SurveyImagePickerItemBuilder<TEntity> ContinueInSameLine()
+        public ImagePickerQuestionBuilder<TEntity> ContinueInSameLine()
         {
             _item.StartWithNewLine = false;
             return this;
         }
 
-        public SurveyImagePickerItemBuilder<TEntity> HasColumnCount(int value)
+        public ImagePickerQuestionBuilder<TEntity> HasColumnCount(int value)
         {
             _item.ColCount = value;
             return this;
         }
 
-        public SurveyImagePickerItemBuilder<TEntity> SetChoicesOrder(SurveyChoicesOrderEnum order)
+        public ImagePickerQuestionBuilder<TEntity> SetChoicesOrder(ChoicesOrderEnum order)
         {
-            string enumName = Enum.GetName(typeof(SurveyChoicesOrderEnum), order);
+            string enumName = Enum.GetName(typeof(ChoicesOrderEnum), order);
             if (enumName != null) _item.ChoicesOrder = enumName.ToLowerInvariant();
             return this;
         }
 
 
-        public SurveyImagePickerItemBuilder<TEntity> AddChoice(string choiceValue, string choiceText, string imageLink)
+        public ImagePickerQuestionBuilder<TEntity> AddChoice(string choiceValue, string choiceText, string imageLink)
         {
             _item.Choices.Add(
-                new SurveyImagePickerChoice() 
+                new ImagePickerChoice() 
                 { 
                     Value = choiceValue, 
                     Text = choiceText,

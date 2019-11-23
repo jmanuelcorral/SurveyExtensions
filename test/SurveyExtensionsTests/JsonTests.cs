@@ -1,6 +1,5 @@
 namespace SurveyExtensionsTests
 {
-    using System;
     using Xunit;
     using SurveyExtensionsTests.Dtos;
     using FluentAssertions;
@@ -8,7 +7,7 @@ namespace SurveyExtensionsTests
     using Newtonsoft.Json;
     using Newtonsoft.Json.Serialization;
     using SurveyExtensions.Builders;
-    using SurveyExtensions.Elements;
+    using SurveyExtensions.Enums;
 
     public class JsonTests
     {
@@ -18,7 +17,7 @@ namespace SurveyExtensionsTests
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
 
             companyBuilder.AddPage("Page1",
-                p => p.AddSingleInput(c => c.DocumentId, "Put Here your DNI", "Document Id Card", SurveyInputType.Text)
+                p => p.AddSingleInputQuestion(c => c.DocumentId, "Put Here your DNI", "Document Id Card", SingleInputTypesEnum.Text)
                 );
 
             var myBuildedElements = companyBuilder.Build();
