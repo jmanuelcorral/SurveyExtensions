@@ -282,5 +282,22 @@ namespace SurveyExtensionsTests
             var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             extractedJson.Should().Be(jsoncollections.MatrixMultipleChoiceExtractedJson);
         }
+
+        [Fact]
+        public void MultipleText()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            companyBuilder.AddPage("Page1",
+                p => p.AddMultipleText(c => c.ContactData,
+                l => l.AddItem("Item 1 text")
+                      .AddItem("Item 2 text")
+                      .AddItem("Item 3 text")
+                      .AddItem("Item 4 text")
+                      .HasColumnCount(2)
+                     ));
+            var myBuildedElements = companyBuilder.Build();
+            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            extractedJson.Should().Be(jsoncollections.MultipleTextTestExtractedJson);
+        }
     }
 }

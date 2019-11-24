@@ -196,6 +196,15 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;colCount&quot;:2,&quot;items&quot;:[{&quot;name&quot;:&quot;Item 1 text&quot;},{&quot;name&quot;:&quot;Item 2 text&quot;},{&quot;name&quot;:&quot;Item 3 text&quot;},{&quot;name&quot;:&quot;Item 4 text&quot;}],&quot;type&quot;:&quot;multipletext&quot;,&quot;title&quot;:null,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string MultipleTextTestExtractedJson {
+            get {
+                return ResourceManager.GetString("MultipleTextTestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:1,&quot;hasOther&quot;:true,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;choices&quot;:[{&quot;value&quot;:&quot;RG1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;RG1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;RG1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;RG1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;RG1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;type&quot;:&quot;radiogroup&quot;,&quot;title&quot;:&quot;Radiogroup 1 Title (asc)&quot;,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
         /// </summary>
         internal static string Radiogroup1TestExtractedJson {

@@ -203,6 +203,17 @@
             return this;
         }
 
+        public PageBuilder<TEntity> AddMultipleText<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MultipleTextQuestionBuilder<TEntity>> multipleTextQuestionBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new MultipleTextQuestionBuilder<TEntity>();
+            multipleTextQuestionBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
         public SurveyPage Build()
         {
             foreach (var surveyItemBuilder in elementsBuilder)
