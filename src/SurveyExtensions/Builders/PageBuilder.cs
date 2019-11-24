@@ -29,14 +29,6 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddSingleInputQuestion<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, SingleInputTypesEnum inputType)
-        {
-            return AddSingleInputQuestion(expression, 
-                x => x.HasTitle(title)
-                       .HasPlaceHolder(placeholder)
-                       .SetInputType(inputType));
-        }
-
         public PageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CommentQuestionBuilder<TEntity>> commentBuilder)
         {
             TEntity mEntity = new TEntity();
@@ -46,14 +38,6 @@
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
-        }
-
-        public PageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string placeholder, int rows)
-        {
-            return AddCommentInput(expression,
-                x => x.HasTitle(title)
-                       .HasPlaceHolder(placeholder)
-                       .HasRows(7));
         }
 
         public PageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CheckboxQuestionBuilder<TEntity>> checkboxBuilder)
@@ -67,11 +51,6 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
-        {
-            return AddCheckboxInput(expression, x => x.HasTitle(title));
-        }
-
         public PageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RadiogroupQuestionBuilder<TEntity>> radiogroupBuilder)
         {
             TEntity mEntity = new TEntity();
@@ -81,11 +60,6 @@
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
-        }
-
-        public PageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
-        {
-            return AddRadiogroup(expression, x => x.HasTitle(title));
         }
 
         public PageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<DropdownQuestionBuilder<TEntity>> dropDownBuilder)
@@ -99,11 +73,6 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
-        {
-            return AddRadiogroup(expression, x => x.HasTitle(title));
-        }
-
         public PageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RatingQuestionBuilder<TEntity>> ratingBuilder)
         {
             TEntity mEntity = new TEntity();
@@ -113,17 +82,6 @@
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;
-        }
-
-        public PageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, 
-            string title, string description, int rateMin, int rateMax, int rateStep)
-        {
-            return AddRating(expression, 
-                x => x.HasTitle(title)
-                        .HasDescription(description)
-                        .HasRateMin(rateMin)
-                        .HasRateMax(rateMax)
-                        .HasRateStep(rateStep));
         }
 
         public PageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<ImagePickerQuestionBuilder<TEntity>> imagePickerBuilder)
@@ -137,11 +95,6 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title)
-        {
-            return AddImagePickerInput(expression, x => x.HasTitle(title));
-        }
-
         public PageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<BooleanQuestionBuilder<TEntity>> booleanBuilder)
         {
             TEntity mEntity = new TEntity();
@@ -152,12 +105,6 @@
             elementsBuilder.Add(builder);
             return this;
         }
-
-        public PageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, string title, string abel, string labelTrue, string labelNo)
-        {
-            return AddImagePickerInput(expression, x => x.HasTitle(title));
-        }
-
 
         public PageBuilder<TEntity> AddHtmlEditor<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<HtmlEditorQuestionBuilder<TEntity>> htmlEditorBuilder)
         {
