@@ -181,12 +181,23 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddMAtrixSingleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixSingleChoiceQuestionBuilder<TEntity>> matrixSingleChoiceQuestionBuilder)
+        public PageBuilder<TEntity> AddMatrixSingleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixSingleChoiceQuestionBuilder<TEntity>> matrixSingleChoiceQuestionBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
             var builder = new MatrixSingleChoiceQuestionBuilder<TEntity>();
             matrixSingleChoiceQuestionBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
+        public PageBuilder<TEntity> AddMatrixMutipleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixMultipleChoiceQuestionBuilder<TEntity>> matrixMutipleChoiceQuestionBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new MatrixMultipleChoiceQuestionBuilder<TEntity>();
+            matrixMutipleChoiceQuestionBuilder.Invoke(builder);
             builder.HasName(myProperty.Name);
             elementsBuilder.Add(builder);
             return this;

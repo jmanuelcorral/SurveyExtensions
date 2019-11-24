@@ -231,11 +231,11 @@ namespace SurveyExtensionsTests
         }
 
         [Fact]
-        public void MAtrixSinglehiceTest()
+        public void MatrixSingleChoiceTest()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             companyBuilder.AddPage("Page1",
-                p => p.AddMAtrixSingleChoice(c => c.ContactData,
+                p => p.AddMatrixSingleChoice(c => c.ContactData,
                 m => m.HasTitle("MSC Title")
                       .HasDescription("MSC DEscription")
                       .AddColumn("0", "Bad")
@@ -252,6 +252,35 @@ namespace SurveyExtensionsTests
             var myBuildedElements = companyBuilder.Build();
             var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             extractedJson.Should().Be(jsoncollections.MatrixSingleChoiceExtractedJson);
+        }
+
+        [Fact]
+        public void MatrixMultipleChoiceTest()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            companyBuilder.AddPage("Page1",
+                p => p.AddMatrixMutipleChoice(c => c.ContactData,
+                m => m.HasTitle("MSC Title")
+                      .HasDescription("MSC DEscription")
+                      .AddColumn("0", "Bad")
+                      .AddColumn("1", "Mid-Bad", CellTypesEnum.Boolean)
+                      .AddColumn("2", "Mid", CellTypesEnum.Checkbox)
+                      .AddColumn("3", "Mid-Good", CellTypesEnum.Comment)
+                      .AddColumn("4", "Good", CellTypesEnum.Dropdown)
+                      .AddColumn("5", "Excellent", CellTypesEnum.Radiogroup)
+                      .AddColumn("6", "SuperPower", CellTypesEnum.Text)
+                      .AddRow("R0", "Superman")
+                      .AddRow("R1", "Batman")
+                      .AddRow("R2", "Spiderman")
+                      .AddRow("R3", "Jocker")
+                      .AddChoice("C1", "Choice 1")
+                      .AddChoice("C2", "Chice 2")
+                      .HasCellType(CellTypesEnum.Dropdown)
+                      .SetIsAllRowRequired()
+                     ));
+            var myBuildedElements = companyBuilder.Build();
+            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            extractedJson.Should().Be(jsoncollections.MatrixMultipleChoiceExtractedJson);
         }
     }
 }
