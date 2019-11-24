@@ -181,6 +181,17 @@
             return this;
         }
 
+        public PageBuilder<TEntity> AddMAtrixSingleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixSingleChoiceQuestionBuilder<TEntity>> matrixSingleChoiceQuestionBuilder)
+        {
+            TEntity mEntity = new TEntity();
+            var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
+            var builder = new MatrixSingleChoiceQuestionBuilder<TEntity>();
+            matrixSingleChoiceQuestionBuilder.Invoke(builder);
+            builder.HasName(myProperty.Name);
+            elementsBuilder.Add(builder);
+            return this;
+        }
+
         public SurveyPage Build()
         {
             foreach (var surveyItemBuilder in elementsBuilder)

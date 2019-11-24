@@ -178,6 +178,15 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;columns&quot;:[{&quot;value&quot;:&quot;0&quot;,&quot;text&quot;:&quot;Bad&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;text&quot;:&quot;Mid-Bad&quot;},{&quot;value&quot;:&quot;2&quot;,&quot;text&quot;:&quot;Mid&quot;},{&quot;value&quot;:&quot;3&quot;,&quot;text&quot;:&quot;Mid-Good&quot;},{&quot;value&quot;:&quot;4&quot;,&quot;text&quot;:&quot;Good&quot;}],&quot;rows&quot;:[{&quot;value&quot;:&quot;R0&quot;,&quot;text&quot;:&quot;Superman&quot;},{&quot;value&quot;:&quot;R1&quot;,&quot;text&quot;:&quot;Batman&quot;},{&quot;value&quot;:&quot;R2&quot;,&quot;text&quot;:&quot;Spiderman&quot;},{&quot;value&quot;:&quot;R3&quot;,&quot;text&quot;:&quot;Jocker&quot;}],&quot;isAllRowRequired&quot;:true,&quot;type&quot;:&quot;matrix&quot;,&quot;title&quot;:&quot;MSC Title&quot;,&quot;description&quot;:&quot;MSC DEscription&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;nam....
+        /// </summary>
+        internal static string MatrixSingleChoiceExtractedJson {
+            get {
+                return ResourceManager.GetString("MatrixSingleChoiceExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:1,&quot;hasOther&quot;:true,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;choices&quot;:[{&quot;value&quot;:&quot;RG1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;RG1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;RG1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;RG1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;RG1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;type&quot;:&quot;radiogroup&quot;,&quot;title&quot;:&quot;Radiogroup 1 Title (asc)&quot;,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
         /// </summary>
         internal static string Radiogroup1TestExtractedJson {
