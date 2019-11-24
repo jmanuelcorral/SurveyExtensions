@@ -53,7 +53,7 @@
 
         public MultipleTextQuestionBuilder<TEntity> AddItem(string text)
         {
-            _item.Items.Add(new Elements.ChoiceItems.MultiTextItem() { Name = text });
+            _item.Items.Add(new Elements.QuestionElements.MultiTextItem() { Name = text });
             return this;
         }
     }

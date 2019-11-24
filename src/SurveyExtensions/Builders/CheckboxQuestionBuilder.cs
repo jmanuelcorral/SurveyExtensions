@@ -2,7 +2,7 @@
 {
     using System;
     using Elements;
-    using SurveyExtensions.Elements.ChoiceItems;
+    using SurveyExtensions.Elements.QuestionElements;
     using SurveyExtensions.Elements.Questions;
     using SurveyExtensions.Enums;
 

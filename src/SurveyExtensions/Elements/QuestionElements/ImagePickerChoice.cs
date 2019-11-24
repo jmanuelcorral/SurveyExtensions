@@ -1,4 +1,4 @@
-﻿namespace SurveyExtensions.Elements.ChoiceItems
+﻿namespace SurveyExtensions.Elements.QuestionElements
 {
     public class ImagePickerChoice : Choice
     {

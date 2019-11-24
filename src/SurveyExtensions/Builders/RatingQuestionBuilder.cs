@@ -1,7 +1,7 @@
 ﻿namespace SurveyExtensions.Builders
 {
     using Elements;
-    using SurveyExtensions.Elements.ChoiceItems;
+    using SurveyExtensions.Elements.QuestionElements;
     using SurveyExtensions.Elements.Questions;
 
     public class RatingQuestionBuilder<TEntity> : 

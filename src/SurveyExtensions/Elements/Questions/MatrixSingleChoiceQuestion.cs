@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.Questions
 {
-    using SurveyExtensions.Elements.ChoiceItems;
+    using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
     public class MatrixSingleChoiceQuestion : SurveyQuestion
