@@ -32,7 +32,10 @@ namespace SurveyExtensionsTests
                 );
 
             companyBuilder.AddPage("MiPaginaMolona",
-                p => p.AddSingleInputQuestion(c => c.DocumentId, "placeholderMolon", "MiDni", SingleInputTypesEnum.Text));
+                p => p.AddSingleInputQuestion(c => c.DocumentId, 
+                    i => i.HasPlaceHolder("placeholderMolon")
+                         .HasTitle("MiDni")
+                         .SetInputType(SingleInputTypesEnum.Text)));
                 
             
             

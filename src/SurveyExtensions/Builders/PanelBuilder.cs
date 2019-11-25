@@ -7,18 +7,19 @@
     using Helpers;
     using SurveyExtensions.Enums;
 
-    public class PageBuilder<TEntity>: IBuilder<SurveyPage> where TEntity : new()
+    public class PanelBuilder<TEntity>: 
+        IBuilder<SurveyItem> where TEntity : new()
     {
-        private SurveyPage _item = new SurveyPage();
+        private SurveyPanel _item = new SurveyPanel();
         private List<IBuilder<SurveyItem>> elementsBuilder = new List<IBuilder<SurveyItem>>();
         
-        public PageBuilder<TEntity> HasName(string name)
+        public PanelBuilder<TEntity> HasName(string name)
         {
             _item.Name = name;
             return this;
         }
 
-        public PageBuilder<TEntity> AddSingleInputQuestion<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SimgleItemQuestionBuilder<TEntity>> inputBuilder)
+        public PanelBuilder<TEntity> AddSingleInputQuestion<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<SimgleItemQuestionBuilder<TEntity>> inputBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -29,7 +30,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CommentQuestionBuilder<TEntity>> commentBuilder)
+        public PanelBuilder<TEntity> AddCommentInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CommentQuestionBuilder<TEntity>> commentBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -40,7 +41,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CheckboxQuestionBuilder<TEntity>> checkboxBuilder)
+        public PanelBuilder<TEntity> AddCheckboxInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<CheckboxQuestionBuilder<TEntity>> checkboxBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -51,7 +52,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RadiogroupQuestionBuilder<TEntity>> radiogroupBuilder)
+        public PanelBuilder<TEntity> AddRadiogroup<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RadiogroupQuestionBuilder<TEntity>> radiogroupBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -62,7 +63,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<DropdownQuestionBuilder<TEntity>> dropDownBuilder)
+        public PanelBuilder<TEntity> AddDropdown<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<DropdownQuestionBuilder<TEntity>> dropDownBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -73,7 +74,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RatingQuestionBuilder<TEntity>> ratingBuilder)
+        public PanelBuilder<TEntity> AddRating<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<RatingQuestionBuilder<TEntity>> ratingBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -84,7 +85,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<ImagePickerQuestionBuilder<TEntity>> imagePickerBuilder)
+        public PanelBuilder<TEntity> AddImagePickerInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<ImagePickerQuestionBuilder<TEntity>> imagePickerBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -95,7 +96,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<BooleanQuestionBuilder<TEntity>> booleanBuilder)
+        public PanelBuilder<TEntity> AddBooleanInput<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<BooleanQuestionBuilder<TEntity>> booleanBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -106,7 +107,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddHtmlEditor<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<HtmlEditorQuestionBuilder<TEntity>> htmlEditorBuilder)
+        public PanelBuilder<TEntity> AddHtmlEditor<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<HtmlEditorQuestionBuilder<TEntity>> htmlEditorBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -117,7 +118,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddFile<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<FileQuestionBuilder<TEntity>> fileBuilder)
+        public PanelBuilder<TEntity> AddFile<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<FileQuestionBuilder<TEntity>> fileBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -128,7 +129,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddMatrixSingleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixSingleChoiceQuestionBuilder<TEntity>> matrixSingleChoiceQuestionBuilder)
+        public PanelBuilder<TEntity> AddMatrixSingleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixSingleChoiceQuestionBuilder<TEntity>> matrixSingleChoiceQuestionBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -139,7 +140,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddMatrixMutipleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixMultipleChoiceQuestionBuilder<TEntity>> matrixMutipleChoiceQuestionBuilder)
+        public PanelBuilder<TEntity> AddMatrixMutipleChoice<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MatrixMultipleChoiceQuestionBuilder<TEntity>> matrixMutipleChoiceQuestionBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -150,7 +151,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddMultipleText<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MultipleTextQuestionBuilder<TEntity>> multipleTextQuestionBuilder)
+        public PanelBuilder<TEntity> AddMultipleText<TProperty>(Expression<Func<TEntity, TProperty>> expression, Action<MultipleTextQuestionBuilder<TEntity>> multipleTextQuestionBuilder)
         {
             TEntity mEntity = new TEntity();
             var myProperty = ReflectionHelpers.GetPropertyInfo(mEntity, expression);
@@ -161,17 +162,7 @@
             return this;
         }
 
-        public PageBuilder<TEntity> AddPanel(string name,Action<PanelBuilder<TEntity>> panelBuilder)
-        {
-            var builder = new PanelBuilder<TEntity>();
-            panelBuilder.Invoke(builder);
-            builder.HasName(name);
-            elementsBuilder.Add(builder);
-            return this;
-        }
-
-
-        public SurveyPage Build()
+        SurveyItem IBuilder<SurveyItem>.Build()
         {
             foreach (var surveyItemBuilder in elementsBuilder)
             {

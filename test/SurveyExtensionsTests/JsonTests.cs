@@ -17,7 +17,10 @@ namespace SurveyExtensionsTests
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
 
             companyBuilder.AddPage("Page1",
-                p => p.AddSingleInputQuestion(c => c.DocumentId, "Put Here your DNI", "Document Id Card", SingleInputTypesEnum.Text)
+                p => p.AddSingleInputQuestion(c => c.DocumentId, 
+                    i => i.HasPlaceHolder("Put Here your DNI")
+                        .HasTitle("Document Id Card")
+                        .SetInputType(SingleInputTypesEnum.Text))
                 );
 
             var myBuildedElements = companyBuilder.Build();
@@ -31,7 +34,10 @@ namespace SurveyExtensionsTests
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
 
             companyBuilder.AddPage("Page1",
-                p => p.AddCommentInput(c => c.ContactData, "Datos de contacto", "entra los datos de contacto", 7)
+                p => p.AddCommentInput(c => c.ContactData, 
+                                i => i.HasTitle("Datos de contacto")
+                                .HasPlaceHolder("entra los datos de contacto")
+                                .HasRows(7))
                       .AddCommentInput(c => c.ContactData,
                                 i => i.HasTitle("Datos de contacto 2")
                                 .HasPlaceHolder("placeholder 2")
@@ -51,7 +57,11 @@ namespace SurveyExtensionsTests
 
             companyBuilder.AddPage("Page1",
                 p => p
-                .AddRating(c => c.IsLegalPerson, "Rating with values", "", 1, 10, 1)
+                .AddRating(c => c.IsLegalPerson, 
+                            i => i.HasTitle("Rating with values")
+                                 .HasRateMin(1)
+                                 .HasRateMax(10)
+                                 .HasRateStep(1))
                 .AddRating(c => c.IsLegalPerson,
                             i => i.HasTitle("Rating with options")
                                 .AddRateValue("RTVal1", "Val 1")
@@ -298,6 +308,17 @@ namespace SurveyExtensionsTests
             var myBuildedElements = companyBuilder.Build();
             var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
             extractedJson.Should().Be(jsoncollections.MultipleTextTestExtractedJson);
+        }
+
+        [Fact]
+        public void PanelWithelementsTest()
+        {
+            SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
+            companyBuilder.AddPage("Page1",
+                p => p.AddPanel("Panel1", pn => pn.AddFile( i=> i.ContactData, f=>f.HasMaxSize(50))));
+            var myBuildedElements = companyBuilder.Build();
+            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            extractedJson.Should().Be(jsoncollections.PanelWithElementsExtractedJson);
         }
     }
 }

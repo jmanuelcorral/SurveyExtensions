@@ -165,6 +165,9 @@
   <data name="MultipleTextTestExtractedJson" xml:space="preserve">
     <value>{"pages":[{"elements":[{"colCount":2,"items":[{"name":"Item 1 text"},{"name":"Item 2 text"},{"name":"Item 3 text"},{"name":"Item 4 text"}],"type":"multipletext","title":null,"description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"ContactData"}],"name":"Page1"}]}</value>
   </data>
+  <data name="PanelWithElementsExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"type":"panel","elements":[{"maxSize":50,"type":"file","title":null,"description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"ContactData"}],"name":"Panel1"}],"name":"Page1"}]}</value>
+  </data>
   <data name="Radiogroup1TestExtractedJson" xml:space="preserve">
     <value>{"pages":[{"elements":[{"choicesOrder":"asc","colCount":1,"hasOther":true,"otherText":"Other choice text","choices":[{"value":"RG1Val1","text":"Choice 1"},{"value":"RG1Val2","text":"Choice 2"},{"value":"RG1Val3","text":"Choice 3"},{"value":"RG1Val4","text":"Choice 4"},{"value":"RG1Val5","text":"Choice 5"}],"type":"radiogroup","title":"Radiogroup 1 Title (asc)","description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"ContactData"}],"name":"Page1"}]}</value>
   </data>
@@ -175,10 +178,10 @@
     <value>{"pages":[{"elements":[{"choicesOrder":"random","colCount":3,"hasOther":false,"otherText":null,"choices":[{"value":"RG3Val1","text":"Choice 1"},{"value":"RG3Val2","text":"Choice 2"},{"value":"RG3Val3","text":"Choice 3"},{"value":"RG3Val4","text":"Choice 4"},{"value":"RG3Val5","text":"Choice 5"}],"type":"radiogroup","title":"Radiogroup  3 Title (random)","description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"ContactData"}],"name":"Page1"}]}</value>
   </data>
   <data name="RatingTestExtractedJson" xml:space="preserve">
-    <value>{"pages":[{"elements":[{"rateMin":1,"rateMax":10,"rateStep":1,"rateValues":[],"minRateDescription":null,"maxRateDescription":null,"type":"rating","title":"Rating with values","description":"","visible":true,"isRequired":false,"startWithNewLine":true,"name":"IsLegalPerson"},{"rateMin":1,"rateMax":5,"rateStep":1,"rateValues":[{"value":"RTVal1","text":"Val 1"},{"value":"RTVal2","text":"Val 2"},{"value":"RTVal3","text":"Val 3"},{"value":"RTVal4","text":"Val 4"},{"value":"RTVal5","text":"Val 5"},{"value":"RTVal6","text":"Val 6"},{"value":"RTVal7","text":"Val 7"},{"value":"RTVal8","text":"Val 8"}],"minRateDescription":null,"maxRateDescription":null,"type":"rating","title":"Rating with options","description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"IsLegalPerson"}],"name":"Page1"}]}</value>
+    <value>{"pages":[{"elements":[{"rateMin":1,"rateMax":10,"rateStep":1,"rateValues":[],"minRateDescription":null,"maxRateDescription":null,"type":"rating","title":"Rating with values","description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"IsLegalPerson"},{"rateMin":1,"rateMax":5,"rateStep":1,"rateValues":[{"value":"RTVal1","text":"Val 1"},{"value":"RTVal2","text":"Val 2"},{"value":"RTVal3","text":"Val 3"},{"value":"RTVal4","text":"Val 4"},{"value":"RTVal5","text":"Val 5"},{"value":"RTVal6","text":"Val 6"},{"value":"RTVal7","text":"Val 7"},{"value":"RTVal8","text":"Val 8"}],"minRateDescription":null,"maxRateDescription":null,"type":"rating","title":"Rating with options","description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"IsLegalPerson"}],"name":"Page1"}]}</value>
   </data>
   <data name="SingleInputTestExtractedJson" xml:space="preserve">
-    <value>{"pages":[{"elements":[{"placeHolder":"Document Id Card","inputType":"text","type":"text","title":"Put Here your DNI","description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"DocumentId"}],"name":"Page1"}]}</value>
+    <value>{"pages":[{"elements":[{"placeHolder":"Put Here your DNI","inputType":"text","type":"text","title":"Document Id Card","description":null,"visible":true,"isRequired":false,"startWithNewLine":true,"name":"DocumentId"}],"name":"Page1"}]}</value>
   </data>
   <data name="test1" xml:space="preserve">
     <value>{"pages":[{"name":"Page1","elements":[{"placeHolder":"Put Here your DNI","inputType":"text","type":"text","title":"Document Id Card","isRequired":false,"name":"DocumentId"}]}]}</value>

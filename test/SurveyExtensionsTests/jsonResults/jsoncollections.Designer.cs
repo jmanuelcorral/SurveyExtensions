@@ -205,6 +205,15 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;type&quot;:&quot;panel&quot;,&quot;elements&quot;:[{&quot;maxSize&quot;:50,&quot;type&quot;:&quot;file&quot;,&quot;title&quot;:null,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Panel1&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string PanelWithElementsExtractedJson {
+            get {
+                return ResourceManager.GetString("PanelWithElementsExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:1,&quot;hasOther&quot;:true,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;choices&quot;:[{&quot;value&quot;:&quot;RG1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;RG1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;RG1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;RG1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;RG1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;type&quot;:&quot;radiogroup&quot;,&quot;title&quot;:&quot;Radiogroup 1 Title (asc)&quot;,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
         /// </summary>
         internal static string Radiogroup1TestExtractedJson {
@@ -232,7 +241,7 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;rateMin&quot;:1,&quot;rateMax&quot;:10,&quot;rateStep&quot;:1,&quot;rateValues&quot;:[],&quot;minRateDescription&quot;:null,&quot;maxRateDescription&quot;:null,&quot;type&quot;:&quot;rating&quot;,&quot;title&quot;:&quot;Rating with values&quot;,&quot;description&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;IsLegalPerson&quot;},{&quot;rateMin&quot;:1,&quot;rateMax&quot;:5,&quot;rateStep&quot;:1,&quot;rateValues&quot;:[{&quot;value&quot;:&quot;RTVal1&quot;,&quot;text&quot;:&quot;Val 1&quot;},{&quot;value&quot;:&quot;RTVal2&quot;,&quot;text&quot;:&quot;Val 2&quot;},{&quot;value&quot;:&quot;RTVal3&quot;,&quot;text&quot;:&quot;Val 3&quot;},{&quot;value&quot;:&quot;RTVal4&quot;,&quot;text&quot;:&quot;Val 4&quot;},{&quot;value&quot;:&quot;RTVal5&quot;,&quot;text&quot;:&quot;Val 5&quot;},{&quot;value&quot;:&quot;RTVal6 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;rateMin&quot;:1,&quot;rateMax&quot;:10,&quot;rateStep&quot;:1,&quot;rateValues&quot;:[],&quot;minRateDescription&quot;:null,&quot;maxRateDescription&quot;:null,&quot;type&quot;:&quot;rating&quot;,&quot;title&quot;:&quot;Rating with values&quot;,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;IsLegalPerson&quot;},{&quot;rateMin&quot;:1,&quot;rateMax&quot;:5,&quot;rateStep&quot;:1,&quot;rateValues&quot;:[{&quot;value&quot;:&quot;RTVal1&quot;,&quot;text&quot;:&quot;Val 1&quot;},{&quot;value&quot;:&quot;RTVal2&quot;,&quot;text&quot;:&quot;Val 2&quot;},{&quot;value&quot;:&quot;RTVal3&quot;,&quot;text&quot;:&quot;Val 3&quot;},{&quot;value&quot;:&quot;RTVal4&quot;,&quot;text&quot;:&quot;Val 4&quot;},{&quot;value&quot;:&quot;RTVal5&quot;,&quot;text&quot;:&quot;Val 5&quot;},{&quot;value&quot;:&quot;RTVa [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string RatingTestExtractedJson {
             get {
@@ -241,7 +250,7 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;placeHolder&quot;:&quot;Document Id Card&quot;,&quot;inputType&quot;:&quot;text&quot;,&quot;type&quot;:&quot;text&quot;,&quot;title&quot;:&quot;Put Here your DNI&quot;,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;DocumentId&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;placeHolder&quot;:&quot;Put Here your DNI&quot;,&quot;inputType&quot;:&quot;text&quot;,&quot;type&quot;:&quot;text&quot;,&quot;title&quot;:&quot;Document Id Card&quot;,&quot;description&quot;:null,&quot;visible&quot;:true,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;name&quot;:&quot;DocumentId&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
         /// </summary>
         internal static string SingleInputTestExtractedJson {
             get {
