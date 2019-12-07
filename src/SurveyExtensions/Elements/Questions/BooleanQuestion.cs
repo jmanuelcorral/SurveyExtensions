@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class BooleanQuestion : SurveyQuestion
+    public class BooleanQuestion : Question
     {
         public BooleanQuestion()
         {

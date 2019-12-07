@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class CommentsQuestion : SurveyQuestion
+    public class CommentsQuestion : Question
     {
         public CommentsQuestion()
         {

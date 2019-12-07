@@ -3,7 +3,7 @@
     using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
-    public class CheckboxQuestion : SurveyQuestion
+    public class CheckboxQuestion : Question
     {
         public CheckboxQuestion()
         {

@@ -3,7 +3,7 @@
     using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
-    public class ImagePickerQuestion : SurveyQuestion
+    public class ImagePickerQuestion : Question
     {
         public ImagePickerQuestion()
         {

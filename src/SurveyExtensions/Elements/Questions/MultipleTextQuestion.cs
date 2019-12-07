@@ -3,7 +3,7 @@
     using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
-    public class MultipleTextQuestion : SurveyQuestion
+    public class MultipleTextQuestion : Question
     {
         public MultipleTextQuestion()
         {

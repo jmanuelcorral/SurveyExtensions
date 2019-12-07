@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class SingleInputQuestion : SurveyQuestion
+    public class SingleInputQuestion : Question
     {
         public SingleInputQuestion()
         {

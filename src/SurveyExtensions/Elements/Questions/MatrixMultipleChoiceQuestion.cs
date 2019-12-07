@@ -3,7 +3,7 @@
     using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
-    public class MatrixMultipleChoiceQuestion : SurveyQuestion
+    public class MatrixMultipleChoiceQuestion : Question
     {
         public MatrixMultipleChoiceQuestion()
         {

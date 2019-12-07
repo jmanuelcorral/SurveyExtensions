@@ -3,7 +3,7 @@
     using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
-    public class DropdownIQuestion : SurveyQuestion
+    public class DropdownIQuestion : Question
     {
 
         public DropdownIQuestion()

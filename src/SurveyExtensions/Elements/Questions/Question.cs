@@ -2,7 +2,7 @@
 {
     using System;
 
-    public abstract class SurveyQuestion : SurveyItem
+    public abstract class Question : SurveyItem
     {
         public string Type { get; set; }
         public string Title { get; set; }

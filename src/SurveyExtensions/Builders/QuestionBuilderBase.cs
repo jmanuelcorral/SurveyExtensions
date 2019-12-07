@@ -6,7 +6,7 @@
 
     public abstract class QuestionBuilderBase<TEntity, TQuestion> : IBuilder<SurveyItem> 
         where TEntity : new()
-        where TQuestion : SurveyQuestion
+        where TQuestion : Question
     {
         protected TQuestion _item = (TQuestion)(Activator.CreateInstance(typeof(TQuestion)));
 

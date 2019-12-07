@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class HtmlEditorQuestion : SurveyQuestion
+    public class HtmlEditorQuestion : Question
     {
         public HtmlEditorQuestion()
         {

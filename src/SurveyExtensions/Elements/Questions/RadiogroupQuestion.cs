@@ -3,7 +3,7 @@
     using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
-    public class RadiogroupQuestion : SurveyQuestion
+    public class RadiogroupQuestion : Question
     {
 
         public RadiogroupQuestion()

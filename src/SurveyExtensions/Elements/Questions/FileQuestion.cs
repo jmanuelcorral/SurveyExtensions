@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Elements.Questions
 {
-    public class FileQuestion : SurveyQuestion
+    public class FileQuestion : Question
     {
         public FileQuestion()
         {

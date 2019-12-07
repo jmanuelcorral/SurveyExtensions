@@ -3,7 +3,7 @@
     using SurveyExtensions.Elements.QuestionElements;
     using System.Collections.Generic;
 
-    public class RatingQuestion : SurveyQuestion
+    public class RatingQuestion : Question
     {
 
         public RatingQuestion()
