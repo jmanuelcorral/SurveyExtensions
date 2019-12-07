@@ -4,8 +4,6 @@ namespace SurveyExtensionsTests
     using SurveyExtensionsTests.Dtos;
     using FluentAssertions;
     using SurveyExtensionsTests.jsonResults;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Serialization;
     using SurveyExtensions.Builders;
     using SurveyExtensions.Enums;
 
@@ -23,8 +21,8 @@ namespace SurveyExtensionsTests
                         .SetInputType(SingleInputTypes.Text))
                 );
 
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.SingleInputTestExtractedJson);
         }
 
@@ -45,8 +43,8 @@ namespace SurveyExtensionsTests
                                 .ContinueInSameLine())
                       );
 
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.CommentTestExtractedJson);
         }
 
@@ -74,8 +72,8 @@ namespace SurveyExtensionsTests
                                 .AddRateValue("RTVal8", "Val 8"))
                 );
 
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.RatingTestExtractedJson);
         }
 
@@ -84,8 +82,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_CheckboxWithAllWithNoneSortedAscending(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Checkbox1TestExtractedJson);
         }
 
@@ -94,8 +92,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_CheckboxWithAllSortedDescending(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Checkbox2TestExtractedJson);
         }
 
@@ -104,8 +102,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_CheckboxWithAllWithNoneSortedAscending(companyBuilder, "Checkbox 3");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Checkbox3TestExtractedJson);
         }
 
@@ -114,8 +112,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_RadiogroupAscending(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Radiogroup1TestExtractedJson);
         }
 
@@ -124,8 +122,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_RadiogroupDescending(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Radiogroup2TestExtractedJson);
         }
 
@@ -134,8 +132,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_RadiogroupRandom(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Radiogroup3TestExtractedJson);
         }
 
@@ -143,9 +141,9 @@ namespace SurveyExtensionsTests
         public void Dromdowm1TestAscending()
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
-            Factory.BulderFactory.Get_1Page_RadiogroupRandom(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            Factory.BulderFactory.Get_1Page_DropdownAscending(companyBuilder, "Page1");
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Dropdown1TestExtractedJson);
         }
 
@@ -154,8 +152,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_DropdownDescending(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Dropdown2TestExtractedJson);
         }
 
@@ -164,8 +162,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_DropdownRandom(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.Dropdown3TestExtractedJson);
         }
 
@@ -174,8 +172,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_ImagePickerAscending(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.ImagePicker1TestExtractedJson);
         }
 
@@ -184,8 +182,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_ImagePickerDescending(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.ImagePicker2TestExtractedJson);
         }
 
@@ -194,8 +192,8 @@ namespace SurveyExtensionsTests
         {
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             Factory.BulderFactory.Get_1Page_ImagePickerRandom(companyBuilder, "Page1");
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.ImagePicker3TestExtractedJson);
         }
 
@@ -209,8 +207,8 @@ namespace SurveyExtensionsTests
                       .HasLabelTrue("True")
                       .HasLabelFalse("False")
                      ));
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.BooleanTestExtractedJson);
         }
 
@@ -222,8 +220,8 @@ namespace SurveyExtensionsTests
                 p => p.AddHtmlEditor(c => c.ContactData,
                 l => l.HasHtml("<h1>H1 content</h1><p>Paragraph</p>")
                      ));
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.HtmlEditorTestExtractedJson);
         }
 
@@ -235,8 +233,8 @@ namespace SurveyExtensionsTests
                 p => p.AddFile(c => c.ContactData,
                 l => l.HasMaxSize(250)
                      ));
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.FileExtractedJson);
         }
 
@@ -259,8 +257,8 @@ namespace SurveyExtensionsTests
                       .AddRow("R3", "Jocker")
                       .SetIsAllRowRequired()
                      ));
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.MatrixSingleChoiceExtractedJson);
         }
 
@@ -286,10 +284,9 @@ namespace SurveyExtensionsTests
                       .AddChoice("C1", "Choice 1")
                       .AddChoice("C2", "Chice 2")
                       .HasCellType(CellTypes.Dropdown)
-                      .SetIsAllRowRequired()
                      ));
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.MatrixMultipleChoiceExtractedJson);
         }
 
@@ -305,8 +302,8 @@ namespace SurveyExtensionsTests
                       .AddItem("Item 4 text")
                       .HasColumnCount(2)
                      ));
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.MultipleTextTestExtractedJson);
         }
 
@@ -316,8 +313,8 @@ namespace SurveyExtensionsTests
             SurveyBuilder<CompanyDto> companyBuilder = new SurveyBuilder<CompanyDto>();
             companyBuilder.AddPage("Page1",
                 p => p.AddPanel("Panel1", pn => pn.AddFile( i=> i.ContactData, f=>f.HasMaxSize(50))));
-            var myBuildedElements = companyBuilder.Build();
-            var extractedJson = JsonConvert.SerializeObject(myBuildedElements, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            var builtCompany = companyBuilder.Build();
+            var extractedJson = builtCompany.ToJson();
             extractedJson.Should().Be(jsoncollections.PanelWithElementsExtractedJson);
         }
     }
