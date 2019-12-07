@@ -10,7 +10,12 @@
         {
             Type = "radiogroup";
         }
+        public string Title { get; set; }
 
+        public string Description { get; set; }
+
+        public bool IsRequired { get; set; } = false;
+        public bool StartWithNewLine { get; set; } = true;
         public string ChoicesOrder { get; set; }
         public int ColCount { get; set; }
         public bool HasOther { get; set; }

@@ -49,7 +49,11 @@
         public DropdownQuestionBuilder<TEntity> SetChoicesOrder(ChoicesOrderOprions order)
         {
             string enumName = Enum.GetName(typeof(ChoicesOrderOprions), order);
-            if (enumName != null) _item.ChoicesOrder = enumName.ToLowerInvariant();
+            if (enumName != null)
+            {
+                _item.ChoicesOrder = enumName.ToLowerInvariant();
+            }
+
             return this;
         }
 
@@ -63,6 +67,14 @@
         public DropdownQuestionBuilder<TEntity> AddChoice(string choiceValue, string choiceText)
         {
             _item.Choices.Add(new Choice() { Value = choiceValue, Text = choiceText });
+            return this;
+        }
+
+        public DropdownQuestionBuilder<TEntity> AutoChoices(int minChoice, int maxChoice, int choiceStep)
+        {
+            _item.ChoicesMin = minChoice;
+            _item.ChoicesMax = maxChoice;
+            _item.ChoicesStep = choiceStep;
             return this;
         }
     }

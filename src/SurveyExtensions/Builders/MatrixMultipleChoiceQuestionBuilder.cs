@@ -46,12 +46,6 @@
             return this;
         }
 
-        public MatrixMultipleChoiceQuestionBuilder<TEntity> SetIsAllRowRequired()
-        {
-            _item.IsAllRowRequired = true;
-            return this;
-        }
-
         public MatrixMultipleChoiceQuestionBuilder<TEntity> HasTotalText(string value)
         {
             _item.TotalText= value;
@@ -61,7 +55,11 @@
         public MatrixMultipleChoiceQuestionBuilder<TEntity> HasCellType(CellTypes cellType)
         {
             string enumName = Enum.GetName(typeof(CellTypes), cellType);
-            if (enumName != null) _item.CellType = enumName.ToLowerInvariant();
+            if (enumName != null)
+            {
+                _item.CellType = enumName.ToLowerInvariant();
+            }
+
             return this;
         }
 
@@ -69,7 +67,11 @@
         {
             string ct = null;
             string enumName = Enum.GetName(typeof(CellTypes), cellType);
-            if (enumName != null) ct = enumName.ToLowerInvariant();
+            if (enumName != null)
+            {
+                ct = enumName.ToLowerInvariant();
+            }
+
             _item.Columns.Add(new MatrixMultipleChoiceChoice() { Value = value, Text = text, CellType = ct });
             return this;
         }

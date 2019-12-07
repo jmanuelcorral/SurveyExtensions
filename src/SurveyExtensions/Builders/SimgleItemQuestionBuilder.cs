@@ -47,7 +47,11 @@
         public SimgleItemQuestionBuilder<TEntity> SetInputType(SingleInputTypes inputType)
         {
             string enumName = Enum.GetName(typeof(SingleInputTypes) ,inputType);
-            if (enumName != null) _item.InputType = enumName.ToLowerInvariant();
+            if (enumName != null)
+            {
+                _item.InputType = enumName.ToLowerInvariant();
+            }
+
             return this;
         }
 

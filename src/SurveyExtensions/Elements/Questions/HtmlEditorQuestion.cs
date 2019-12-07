@@ -7,6 +7,7 @@
             Type = "html";
         }
 
+        public bool StartWithNewLine { get; set; } = true;
         public string Html { get; set; }
     }
 }
