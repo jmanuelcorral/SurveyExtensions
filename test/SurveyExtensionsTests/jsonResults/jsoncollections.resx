@@ -117,6 +117,72 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BooleanTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":null,"description":null,"isRequired":false,"startWithNewLine":true,"label":"Boolean label","labelTrue":"True","labelFalse":"False","type":"boolean","visible":true,"name":"IsLegalPerson"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Checkbox1TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Choice 1 Title (asc) - All - None","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"asc","colCount":1,"choices":[{"value":"CB1Val1","text":"Choice 1"},{"value":"CB1Val2","text":"Choice 2"},{"value":"CB1Val3","text":"Choice 3"},{"value":"CB1Val4","text":"Choice 4"},{"value":"CB1Val5","text":"Choice 5"}],"hasOther":false,"otherText":"Other choice text","hasSelectAll":true,"selectAllText":"Select All","hasNone":true,"noneText":"Select none","type":"checkbox","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Checkbox2TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Choice 2 Title (desc) - All","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"desc","colCount":2,"choices":[{"value":"CB2Val1","text":"Choice 1"},{"value":"CB2Val2","text":"Choice 2"},{"value":"CB2Val3","text":"Choice 3"},{"value":"CB2Val4","text":"Choice 4"},{"value":"CB2Val5","text":"Choice 5"}],"hasOther":false,"otherText":"Other choice text","hasSelectAll":true,"selectAllText":"Select All","hasNone":true,"noneText":null,"type":"checkbox","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Checkbox3TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Choice 1 Title (asc) - All - None","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"asc","colCount":1,"choices":[{"value":"CB1Val1","text":"Choice 1"},{"value":"CB1Val2","text":"Choice 2"},{"value":"CB1Val3","text":"Choice 3"},{"value":"CB1Val4","text":"Choice 4"},{"value":"CB1Val5","text":"Choice 5"}],"hasOther":false,"otherText":"Other choice text","hasSelectAll":true,"selectAllText":"Select All","hasNone":true,"noneText":"Select none","type":"checkbox","visible":true,"name":"ContactData"}],"name":"Checkbox 3"}]}</value>
+  </data>
+  <data name="CommentTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Datos de contacto","description":null,"isRequired":false,"startWithNewLine":true,"placeHolder":"entra los datos de contacto","rows":7,"type":"comment","visible":true,"name":"ContactData"},{"title":"Datos de contacto 2","description":null,"isRequired":false,"startWithNewLine":false,"placeHolder":"placeholder 2","rows":14,"type":"comment","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Dropdown1TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Dropdown 1 Title (asc)","description":"Dropdown 1 description","isRequired":false,"startWithNewLine":true,"choicesOrder":"asc","choices":[{"value":"DD1Val1","text":"Choice 1"},{"value":"DD1Val2","text":"Choice 2"},{"value":"DD1Val3","text":"Choice 3"},{"value":"DD1Val4","text":"Choice 4"},{"value":"DD1Val5","text":"Choice 5"}],"hasOther":true,"otherText":"Other choice text","optionCaption":null,"choicesMin":0,"choicesMax":0,"choicesStep":0,"type":"dropdown","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Dropdown2TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Dropdown  2 Title (desc)","description":"Dropdown 2 description","isRequired":false,"startWithNewLine":true,"choicesOrder":"desc","choices":[{"value":"DD2Val1","text":"Choice 1"},{"value":"DD2Val2","text":"Choice 2"},{"value":"DD2Val3","text":"Choice 3"},{"value":"DD2Val4","text":"Choice 4"},{"value":"DD2Val5","text":"Choice 5"}],"hasOther":false,"otherText":null,"optionCaption":null,"choicesMin":0,"choicesMax":0,"choicesStep":0,"type":"dropdown","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Dropdown3TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Dropdown  3 Title (random)","description":"Dropdown 3 description","isRequired":false,"startWithNewLine":true,"choicesOrder":"random","choices":[{"value":"DD3Val1","text":"Choice 1"},{"value":"DD3Val2","text":"Choice 2"},{"value":"DD3Val3","text":"Choice 3"},{"value":"DD3Val4","text":"Choice 4"},{"value":"DD3Val5","text":"Choice 5"}],"hasOther":false,"otherText":null,"optionCaption":null,"choicesMin":0,"choicesMax":0,"choicesStep":0,"type":"dropdown","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="FileExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":null,"description":null,"isRequired":false,"startWithNewLine":true,"showPreview":false,"imageHeight":0,"imageWidth":0,"storeDataAsText":false,"maxSize":250,"type":"file","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="HtmlEditorTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"startWithNewLine":true,"html":"&lt;h1&gt;H1 content&lt;/h1&gt;&lt;p&gt;Paragraph&lt;/p&gt;","type":"html","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="ImagePicker1TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Image Picker 1 Title (asc)","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"asc","colCount":0,"choices":[{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg","value":"IP1Val1","text":"Lion"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg","value":"IP1Val2","text":"Giraffe"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg","value":"IP1Val3","text":"Panda"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg","value":"IP1Val4","text":"Camel"}],"type":"imagepicker","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="ImagePicker2TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Image Picker 1 Title (asc)","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"desc","colCount":2,"choices":[{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg","value":"IP1Val1","text":"Lion"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg","value":"IP1Val2","text":"Giraffe"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg","value":"IP1Val3","text":"Panda"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg","value":"IP1Val4","text":"Camel"}],"type":"imagepicker","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="ImagePicker3TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Image Picker 1 Title (asc)","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"random","colCount":0,"choices":[{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg","value":"IP1Val1","text":"Lion"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg","value":"IP1Val2","text":"Giraffe"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg","value":"IP1Val3","text":"Panda"},{"imageLink":"https://surveyjs.io/Content/Images/examples/image-picker/camel.jpg","value":"IP1Val4","text":"Camel"}],"type":"imagepicker","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="MatrixMultipleChoiceExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"MSC Title","description":"MSC DEscription","isRequired":false,"startWithNewLine":true,"cellType":"dropdown","totalText":null,"columns":[{"cellType":null,"value":"0","text":"Bad"},{"cellType":"boolean","value":"1","text":"Mid-Bad"},{"cellType":"checkbox","value":"2","text":"Mid"},{"cellType":"comment","value":"3","text":"Mid-Good"},{"cellType":"dropdown","value":"4","text":"Good"},{"cellType":"radiogroup","value":"5","text":"Excellent"},{"cellType":"text","value":"6","text":"SuperPower"}],"rows":[{"value":"R0","text":"Superman"},{"value":"R1","text":"Batman"},{"value":"R2","text":"Spiderman"},{"value":"R3","text":"Jocker"}],"choices":[{"value":"C1","text":"Choice 1"},{"value":"C2","text":"Chice 2"}],"type":"matrixdropdown","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="MatrixSingleChoiceExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"MSC Title","description":"MSC DEscription","isRequired":false,"startWithNewLine":true,"columns":[{"value":"0","text":"Bad"},{"value":"1","text":"Mid-Bad"},{"value":"2","text":"Mid"},{"value":"3","text":"Mid-Good"},{"value":"4","text":"Good"}],"rows":[{"value":"R0","text":"Superman"},{"value":"R1","text":"Batman"},{"value":"R2","text":"Spiderman"},{"value":"R3","text":"Jocker"}],"isAllRowRequired":true,"type":"matrix","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="MultipleTextTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":null,"description":null,"isRequired":false,"startWithNewLine":true,"colCount":2,"items":[{"name":"Item 1 text"},{"name":"Item 2 text"},{"name":"Item 3 text"},{"name":"Item 4 text"}],"type":"multipletext","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="PanelWithElementsExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"type":"panel","title":null,"elements":[{"title":null,"description":null,"isRequired":false,"startWithNewLine":true,"showPreview":false,"imageHeight":0,"imageWidth":0,"storeDataAsText":false,"maxSize":50,"type":"file","visible":true,"name":"ContactData"}],"name":"Panel1"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Radiogroup1TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Radiogroup 1 Title (asc)","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"asc","colCount":1,"hasOther":true,"otherText":"Other choice text","choices":[{"value":"RG1Val1","text":"Choice 1"},{"value":"RG1Val2","text":"Choice 2"},{"value":"RG1Val3","text":"Choice 3"},{"value":"RG1Val4","text":"Choice 4"},{"value":"RG1Val5","text":"Choice 5"}],"type":"radiogroup","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Radiogroup2TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Radiogroup  2 Title (desc)","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":null,"colCount":2,"hasOther":false,"otherText":null,"choices":[{"value":"RG2Val1","text":"Choice 1"},{"value":"RG2Val2","text":"Choice 2"},{"value":"RG2Val3","text":"Choice 3"},{"value":"RG2Val4","text":"Choice 4"},{"value":"RG2Val5","text":"Choice 5"}],"type":"radiogroup","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="Radiogroup3TestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Radiogroup  3 Title (random)","description":null,"isRequired":false,"startWithNewLine":true,"choicesOrder":"random","colCount":3,"hasOther":false,"otherText":null,"choices":[{"value":"RG3Val1","text":"Choice 1"},{"value":"RG3Val2","text":"Choice 2"},{"value":"RG3Val3","text":"Choice 3"},{"value":"RG3Val4","text":"Choice 4"},{"value":"RG3Val5","text":"Choice 5"}],"type":"radiogroup","visible":true,"name":"ContactData"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="RatingTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Rating with values","description":null,"isRequired":false,"startWithNewLine":true,"rateMin":1,"rateMax":10,"rateStep":1,"rateValues":[],"minRateDescription":null,"maxRateDescription":null,"type":"rating","visible":true,"name":"IsLegalPerson"},{"title":"Rating with options","description":null,"isRequired":false,"startWithNewLine":true,"rateMin":1,"rateMax":5,"rateStep":1,"rateValues":[{"value":"RTVal1","text":"Val 1"},{"value":"RTVal2","text":"Val 2"},{"value":"RTVal3","text":"Val 3"},{"value":"RTVal4","text":"Val 4"},{"value":"RTVal5","text":"Val 5"},{"value":"RTVal6","text":"Val 6"},{"value":"RTVal7","text":"Val 7"},{"value":"RTVal8","text":"Val 8"}],"minRateDescription":null,"maxRateDescription":null,"type":"rating","visible":true,"name":"IsLegalPerson"}],"name":"Page1"}]}</value>
+  </data>
+  <data name="SingleInputTestExtractedJson" xml:space="preserve">
+    <value>{"pages":[{"elements":[{"title":"Document Id Card","description":null,"isRequired":false,"startWithNewLine":true,"placeHolder":"Put Here your DNI","inputType":"text","type":"text","visible":true,"name":"DocumentId"}],"name":"Page1"}]}</value>
+  </data>
   <data name="test1" xml:space="preserve">
     <value>{"pages":[{"name":"Page1","elements":[{"placeHolder":"Put Here your DNI","inputType":"text","type":"text","title":"Document Id Card","isRequired":false,"name":"DocumentId"}]}]}</value>
   </data>

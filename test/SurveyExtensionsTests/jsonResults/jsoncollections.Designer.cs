@@ -61,6 +61,204 @@ namespace SurveyExtensionsTests.jsonResults {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:null,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;label&quot;:&quot;Boolean label&quot;,&quot;labelTrue&quot;:&quot;True&quot;,&quot;labelFalse&quot;:&quot;False&quot;,&quot;type&quot;:&quot;boolean&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;IsLegalPerson&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string BooleanTestExtractedJson {
+            get {
+                return ResourceManager.GetString("BooleanTestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Choice 1 Title (asc) - All - None&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:1,&quot;choices&quot;:[{&quot;value&quot;:&quot;CB1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;CB1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;CB1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;CB1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;CB1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;hasOther&quot;:false,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;hasSelectAll&quot;:true,&quot;selectAllText&quot;:&quot;Select All&quot;,&quot;hasNone&quot;:true,&quot;noneText&quot;:&quot;Select none&quot;,&quot;type&quot;:&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Checkbox1TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Checkbox1TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Choice 2 Title (desc) - All&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;desc&quot;,&quot;colCount&quot;:2,&quot;choices&quot;:[{&quot;value&quot;:&quot;CB2Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;CB2Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;CB2Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;CB2Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;CB2Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;hasOther&quot;:false,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;hasSelectAll&quot;:true,&quot;selectAllText&quot;:&quot;Select All&quot;,&quot;hasNone&quot;:true,&quot;noneText&quot;:null,&quot;type&quot;:&quot;checkbox&quot;,&quot;vis [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Checkbox2TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Checkbox2TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Choice 1 Title (asc) - All - None&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:1,&quot;choices&quot;:[{&quot;value&quot;:&quot;CB1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;CB1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;CB1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;CB1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;CB1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;hasOther&quot;:false,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;hasSelectAll&quot;:true,&quot;selectAllText&quot;:&quot;Select All&quot;,&quot;hasNone&quot;:true,&quot;noneText&quot;:&quot;Select none&quot;,&quot;type&quot;:&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Checkbox3TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Checkbox3TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Datos de contacto&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;placeHolder&quot;:&quot;entra los datos de contacto&quot;,&quot;rows&quot;:7,&quot;type&quot;:&quot;comment&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;},{&quot;title&quot;:&quot;Datos de contacto 2&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:false,&quot;placeHolder&quot;:&quot;placeholder 2&quot;,&quot;rows&quot;:14,&quot;type&quot;:&quot;comment&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string CommentTestExtractedJson {
+            get {
+                return ResourceManager.GetString("CommentTestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Dropdown 1 Title (asc)&quot;,&quot;description&quot;:&quot;Dropdown 1 description&quot;,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;choices&quot;:[{&quot;value&quot;:&quot;DD1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;DD1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;DD1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;DD1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;DD1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;hasOther&quot;:true,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;optionCaption&quot;:null,&quot;choicesMin&quot;:0,&quot;choicesMax&quot;:0,&quot;choicesStep&quot;:0,&quot;type&quot;:&quot;dropdown&quot;,&quot;visible&quot;:true,&quot;n [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Dropdown1TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Dropdown1TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Dropdown  2 Title (desc)&quot;,&quot;description&quot;:&quot;Dropdown 2 description&quot;,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;desc&quot;,&quot;choices&quot;:[{&quot;value&quot;:&quot;DD2Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;DD2Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;DD2Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;DD2Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;DD2Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;hasOther&quot;:false,&quot;otherText&quot;:null,&quot;optionCaption&quot;:null,&quot;choicesMin&quot;:0,&quot;choicesMax&quot;:0,&quot;choicesStep&quot;:0,&quot;type&quot;:&quot;dropdown&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;Conta [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Dropdown2TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Dropdown2TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Dropdown  3 Title (random)&quot;,&quot;description&quot;:&quot;Dropdown 3 description&quot;,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;random&quot;,&quot;choices&quot;:[{&quot;value&quot;:&quot;DD3Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;DD3Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;DD3Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;DD3Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;DD3Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;hasOther&quot;:false,&quot;otherText&quot;:null,&quot;optionCaption&quot;:null,&quot;choicesMin&quot;:0,&quot;choicesMax&quot;:0,&quot;choicesStep&quot;:0,&quot;type&quot;:&quot;dropdown&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;C [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Dropdown3TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Dropdown3TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:null,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;showPreview&quot;:false,&quot;imageHeight&quot;:0,&quot;imageWidth&quot;:0,&quot;storeDataAsText&quot;:false,&quot;maxSize&quot;:250,&quot;type&quot;:&quot;file&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string FileExtractedJson {
+            get {
+                return ResourceManager.GetString("FileExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;startWithNewLine&quot;:true,&quot;html&quot;:&quot;&lt;h1&gt;H1 content&lt;/h1&gt;&lt;p&gt;Paragraph&lt;/p&gt;&quot;,&quot;type&quot;:&quot;html&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string HtmlEditorTestExtractedJson {
+            get {
+                return ResourceManager.GetString("HtmlEditorTestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Image Picker 1 Title (asc)&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:0,&quot;choices&quot;:[{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg&quot;,&quot;value&quot;:&quot;IP1Val1&quot;,&quot;text&quot;:&quot;Lion&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg&quot;,&quot;value&quot;:&quot;IP1Val2&quot;,&quot;text&quot;:&quot;Giraffe&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg&quot;,&quot;value&quot;:&quot;IP1Val3&quot;,&quot;text&quot;:&quot;Pa [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImagePicker1TestExtractedJson {
+            get {
+                return ResourceManager.GetString("ImagePicker1TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Image Picker 1 Title (asc)&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;desc&quot;,&quot;colCount&quot;:2,&quot;choices&quot;:[{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg&quot;,&quot;value&quot;:&quot;IP1Val1&quot;,&quot;text&quot;:&quot;Lion&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg&quot;,&quot;value&quot;:&quot;IP1Val2&quot;,&quot;text&quot;:&quot;Giraffe&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg&quot;,&quot;value&quot;:&quot;IP1Val3&quot;,&quot;text&quot;:&quot;P [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImagePicker2TestExtractedJson {
+            get {
+                return ResourceManager.GetString("ImagePicker2TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Image Picker 1 Title (asc)&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;random&quot;,&quot;colCount&quot;:0,&quot;choices&quot;:[{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg&quot;,&quot;value&quot;:&quot;IP1Val1&quot;,&quot;text&quot;:&quot;Lion&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/giraffe.jpg&quot;,&quot;value&quot;:&quot;IP1Val2&quot;,&quot;text&quot;:&quot;Giraffe&quot;},{&quot;imageLink&quot;:&quot;https://surveyjs.io/Content/Images/examples/image-picker/panda.jpg&quot;,&quot;value&quot;:&quot;IP1Val3&quot;,&quot;text&quot;: [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImagePicker3TestExtractedJson {
+            get {
+                return ResourceManager.GetString("ImagePicker3TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;MSC Title&quot;,&quot;description&quot;:&quot;MSC DEscription&quot;,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;cellType&quot;:&quot;dropdown&quot;,&quot;totalText&quot;:null,&quot;columns&quot;:[{&quot;cellType&quot;:null,&quot;value&quot;:&quot;0&quot;,&quot;text&quot;:&quot;Bad&quot;},{&quot;cellType&quot;:&quot;boolean&quot;,&quot;value&quot;:&quot;1&quot;,&quot;text&quot;:&quot;Mid-Bad&quot;},{&quot;cellType&quot;:&quot;checkbox&quot;,&quot;value&quot;:&quot;2&quot;,&quot;text&quot;:&quot;Mid&quot;},{&quot;cellType&quot;:&quot;comment&quot;,&quot;value&quot;:&quot;3&quot;,&quot;text&quot;:&quot;Mid-Good&quot;},{&quot;cellType&quot;:&quot;dropdown&quot;,&quot;value&quot;:&quot;4&quot;,&quot;text&quot;:&quot;Good&quot;},{&quot;cellType&quot;:&quot;radiogroup&quot;,&quot;value&quot;:&quot;5&quot;,&quot;text&quot;:&quot;Excellent&quot;},{&quot;cellType&quot;:&quot;text&quot;,&quot;value&quot;:&quot;6&quot;,&quot;t....
+        /// </summary>
+        internal static string MatrixMultipleChoiceExtractedJson {
+            get {
+                return ResourceManager.GetString("MatrixMultipleChoiceExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;MSC Title&quot;,&quot;description&quot;:&quot;MSC DEscription&quot;,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;columns&quot;:[{&quot;value&quot;:&quot;0&quot;,&quot;text&quot;:&quot;Bad&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;text&quot;:&quot;Mid-Bad&quot;},{&quot;value&quot;:&quot;2&quot;,&quot;text&quot;:&quot;Mid&quot;},{&quot;value&quot;:&quot;3&quot;,&quot;text&quot;:&quot;Mid-Good&quot;},{&quot;value&quot;:&quot;4&quot;,&quot;text&quot;:&quot;Good&quot;}],&quot;rows&quot;:[{&quot;value&quot;:&quot;R0&quot;,&quot;text&quot;:&quot;Superman&quot;},{&quot;value&quot;:&quot;R1&quot;,&quot;text&quot;:&quot;Batman&quot;},{&quot;value&quot;:&quot;R2&quot;,&quot;text&quot;:&quot;Spiderman&quot;},{&quot;value&quot;:&quot;R3&quot;,&quot;text&quot;:&quot;Jocker&quot;}],&quot;isAllRowRequired&quot;:true,&quot;type&quot;:&quot;matrix&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;nam....
+        /// </summary>
+        internal static string MatrixSingleChoiceExtractedJson {
+            get {
+                return ResourceManager.GetString("MatrixSingleChoiceExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:null,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;colCount&quot;:2,&quot;items&quot;:[{&quot;name&quot;:&quot;Item 1 text&quot;},{&quot;name&quot;:&quot;Item 2 text&quot;},{&quot;name&quot;:&quot;Item 3 text&quot;},{&quot;name&quot;:&quot;Item 4 text&quot;}],&quot;type&quot;:&quot;multipletext&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string MultipleTextTestExtractedJson {
+            get {
+                return ResourceManager.GetString("MultipleTextTestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;:null,&quot;elements&quot;:[{&quot;title&quot;:null,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;showPreview&quot;:false,&quot;imageHeight&quot;:0,&quot;imageWidth&quot;:0,&quot;storeDataAsText&quot;:false,&quot;maxSize&quot;:50,&quot;type&quot;:&quot;file&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Panel1&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string PanelWithElementsExtractedJson {
+            get {
+                return ResourceManager.GetString("PanelWithElementsExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Radiogroup 1 Title (asc)&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;asc&quot;,&quot;colCount&quot;:1,&quot;hasOther&quot;:true,&quot;otherText&quot;:&quot;Other choice text&quot;,&quot;choices&quot;:[{&quot;value&quot;:&quot;RG1Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;RG1Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;RG1Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;RG1Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;RG1Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;type&quot;:&quot;radiogroup&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string Radiogroup1TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Radiogroup1TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Radiogroup  2 Title (desc)&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:null,&quot;colCount&quot;:2,&quot;hasOther&quot;:false,&quot;otherText&quot;:null,&quot;choices&quot;:[{&quot;value&quot;:&quot;RG2Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;RG2Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;RG2Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;RG2Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;RG2Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;type&quot;:&quot;radiogroup&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string Radiogroup2TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Radiogroup2TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Radiogroup  3 Title (random)&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;choicesOrder&quot;:&quot;random&quot;,&quot;colCount&quot;:3,&quot;hasOther&quot;:false,&quot;otherText&quot;:null,&quot;choices&quot;:[{&quot;value&quot;:&quot;RG3Val1&quot;,&quot;text&quot;:&quot;Choice 1&quot;},{&quot;value&quot;:&quot;RG3Val2&quot;,&quot;text&quot;:&quot;Choice 2&quot;},{&quot;value&quot;:&quot;RG3Val3&quot;,&quot;text&quot;:&quot;Choice 3&quot;},{&quot;value&quot;:&quot;RG3Val4&quot;,&quot;text&quot;:&quot;Choice 4&quot;},{&quot;value&quot;:&quot;RG3Val5&quot;,&quot;text&quot;:&quot;Choice 5&quot;}],&quot;type&quot;:&quot;radiogroup&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;ContactData&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string Radiogroup3TestExtractedJson {
+            get {
+                return ResourceManager.GetString("Radiogroup3TestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Rating with values&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;rateMin&quot;:1,&quot;rateMax&quot;:10,&quot;rateStep&quot;:1,&quot;rateValues&quot;:[],&quot;minRateDescription&quot;:null,&quot;maxRateDescription&quot;:null,&quot;type&quot;:&quot;rating&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;IsLegalPerson&quot;},{&quot;title&quot;:&quot;Rating with options&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;rateMin&quot;:1,&quot;rateMax&quot;:5,&quot;rateStep&quot;:1,&quot;rateValues&quot;:[{&quot;value&quot;:&quot;RTVal1&quot;,&quot;text&quot;:&quot;Val 1&quot;},{&quot;value&quot;:&quot;RTVal2&quot;,&quot;text&quot;:&quot;Val 2&quot;},{&quot;value&quot;:&quot;RTVal3&quot;,&quot;text&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string RatingTestExtractedJson {
+            get {
+                return ResourceManager.GetString("RatingTestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;elements&quot;:[{&quot;title&quot;:&quot;Document Id Card&quot;,&quot;description&quot;:null,&quot;isRequired&quot;:false,&quot;startWithNewLine&quot;:true,&quot;placeHolder&quot;:&quot;Put Here your DNI&quot;,&quot;inputType&quot;:&quot;text&quot;,&quot;type&quot;:&quot;text&quot;,&quot;visible&quot;:true,&quot;name&quot;:&quot;DocumentId&quot;}],&quot;name&quot;:&quot;Page1&quot;}]}.
+        /// </summary>
+        internal static string SingleInputTestExtractedJson {
+            get {
+                return ResourceManager.GetString("SingleInputTestExtractedJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;pages&quot;:[{&quot;name&quot;:&quot;Page1&quot;,&quot;elements&quot;:[{&quot;placeHolder&quot;:&quot;Put Here your DNI&quot;,&quot;inputType&quot;:&quot;text&quot;,&quot;type&quot;:&quot;text&quot;,&quot;title&quot;:&quot;Document Id Card&quot;,&quot;isRequired&quot;:false,&quot;name&quot;:&quot;DocumentId&quot;}]}]}.
         /// </summary>
         internal static string test1 {
