@@ -52,9 +52,9 @@
             return this;
         }
 
-        public CheckboxQuestionBuilder<TEntity> SetChoicesOrder(ChoicesOrderEnum order)
+        public CheckboxQuestionBuilder<TEntity> SetChoicesOrder(ChoicesOrderOprions order)
         {
-            string enumName = Enum.GetName(typeof(ChoicesOrderEnum), order);
+            string enumName = Enum.GetName(typeof(ChoicesOrderOprions), order);
             if (enumName != null) _item.ChoicesOrder = enumName.ToLowerInvariant();
             return this;
         }

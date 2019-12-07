@@ -58,17 +58,17 @@
             return this;
         }
 
-        public MatrixMultipleChoiceQuestionBuilder<TEntity> HasCellType(CellTypesEnum cellType)
+        public MatrixMultipleChoiceQuestionBuilder<TEntity> HasCellType(CellTypes cellType)
         {
-            string enumName = Enum.GetName(typeof(CellTypesEnum), cellType);
+            string enumName = Enum.GetName(typeof(CellTypes), cellType);
             if (enumName != null) _item.CellType = enumName.ToLowerInvariant();
             return this;
         }
 
-        public MatrixMultipleChoiceQuestionBuilder<TEntity> AddColumn(string value, string text, CellTypesEnum cellType)
+        public MatrixMultipleChoiceQuestionBuilder<TEntity> AddColumn(string value, string text, CellTypes cellType)
         {
             string ct = null;
-            string enumName = Enum.GetName(typeof(CellTypesEnum), cellType);
+            string enumName = Enum.GetName(typeof(CellTypes), cellType);
             if (enumName != null) ct = enumName.ToLowerInvariant();
             _item.Columns.Add(new MatrixMultipleChoiceChoice() { Value = value, Text = text, CellType = ct });
             return this;

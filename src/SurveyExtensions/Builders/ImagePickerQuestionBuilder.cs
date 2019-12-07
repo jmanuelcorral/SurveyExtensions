@@ -52,9 +52,9 @@
             return this;
         }
 
-        public ImagePickerQuestionBuilder<TEntity> SetChoicesOrder(ChoicesOrderEnum order)
+        public ImagePickerQuestionBuilder<TEntity> SetChoicesOrder(ChoicesOrderOprions order)
         {
-            string enumName = Enum.GetName(typeof(ChoicesOrderEnum), order);
+            string enumName = Enum.GetName(typeof(ChoicesOrderOprions), order);
             if (enumName != null) _item.ChoicesOrder = enumName.ToLowerInvariant();
             return this;
         }

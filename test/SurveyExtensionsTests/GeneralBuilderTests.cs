@@ -21,21 +21,21 @@ namespace SurveyExtensionsTests
                                 b => b
                                     .HasTitle("Dni")
                                     .HasPlaceHolder("Ponga aqui su dni")
-                                    .SetInputType(SingleInputTypesEnum.Text))
+                                    .SetInputType(SingleInputTypes.Text))
                             .AddSingleInputQuestion(x=> x.ContactData,
                                 b=> b
                                     .HasTitle("Datos de Contacto")
                                     .HasPlaceHolder("Ponga Aqui sus Datos de Contacto"))
                 )
                 .AddPage("Pagina 2", page=> 
-                    page.AddSingleInputQuestion(x=> x.IsCashReceiptCriteria, b=> b.SetInputType(SingleInputTypesEnum.Email))
+                    page.AddSingleInputQuestion(x=> x.IsCashReceiptCriteria, b=> b.SetInputType(SingleInputTypes.Email))
                 );
 
             companyBuilder.AddPage("MiPaginaMolona",
                 p => p.AddSingleInputQuestion(c => c.DocumentId, 
                     i => i.HasPlaceHolder("placeholderMolon")
                          .HasTitle("MiDni")
-                         .SetInputType(SingleInputTypesEnum.Text)));
+                         .SetInputType(SingleInputTypes.Text)));
                 
             
             

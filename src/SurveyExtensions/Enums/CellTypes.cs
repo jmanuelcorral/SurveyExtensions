@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Enums
 {
-    public enum CellTypesEnum
+    public enum CellTypes
     {
         Dropdown,
         Checkbox,

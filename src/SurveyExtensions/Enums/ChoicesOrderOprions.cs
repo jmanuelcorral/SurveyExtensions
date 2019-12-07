@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Enums
 {
-    public enum ChoicesOrderEnum
+    public enum ChoicesOrderOprions
     {
         none,
         asc,

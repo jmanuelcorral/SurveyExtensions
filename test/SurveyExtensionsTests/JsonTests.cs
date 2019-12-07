@@ -20,7 +20,7 @@ namespace SurveyExtensionsTests
                 p => p.AddSingleInputQuestion(c => c.DocumentId, 
                     i => i.HasPlaceHolder("Put Here your DNI")
                         .HasTitle("Document Id Card")
-                        .SetInputType(SingleInputTypesEnum.Text))
+                        .SetInputType(SingleInputTypes.Text))
                 );
 
             var myBuildedElements = companyBuilder.Build();
@@ -273,19 +273,19 @@ namespace SurveyExtensionsTests
                 m => m.HasTitle("MSC Title")
                       .HasDescription("MSC DEscription")
                       .AddColumn("0", "Bad")
-                      .AddColumn("1", "Mid-Bad", CellTypesEnum.Boolean)
-                      .AddColumn("2", "Mid", CellTypesEnum.Checkbox)
-                      .AddColumn("3", "Mid-Good", CellTypesEnum.Comment)
-                      .AddColumn("4", "Good", CellTypesEnum.Dropdown)
-                      .AddColumn("5", "Excellent", CellTypesEnum.Radiogroup)
-                      .AddColumn("6", "SuperPower", CellTypesEnum.Text)
+                      .AddColumn("1", "Mid-Bad", CellTypes.Boolean)
+                      .AddColumn("2", "Mid", CellTypes.Checkbox)
+                      .AddColumn("3", "Mid-Good", CellTypes.Comment)
+                      .AddColumn("4", "Good", CellTypes.Dropdown)
+                      .AddColumn("5", "Excellent", CellTypes.Radiogroup)
+                      .AddColumn("6", "SuperPower", CellTypes.Text)
                       .AddRow("R0", "Superman")
                       .AddRow("R1", "Batman")
                       .AddRow("R2", "Spiderman")
                       .AddRow("R3", "Jocker")
                       .AddChoice("C1", "Choice 1")
                       .AddChoice("C2", "Chice 2")
-                      .HasCellType(CellTypesEnum.Dropdown)
+                      .HasCellType(CellTypes.Dropdown)
                       .SetIsAllRowRequired()
                      ));
             var myBuildedElements = companyBuilder.Build();

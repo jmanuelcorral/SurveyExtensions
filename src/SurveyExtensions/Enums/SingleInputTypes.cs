@@ -1,6 +1,6 @@
 ﻿namespace SurveyExtensions.Enums
 {
-    public enum SingleInputTypesEnum
+    public enum SingleInputTypes
     {
         Text,
         Date,
